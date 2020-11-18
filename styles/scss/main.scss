@@ -1,0 +1,90 @@
+:root {
+    /* Colours */
+
+
+}
+
+
+
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: var(--font-body);
+
+}
+
+header {
+
+}
+
+
+.navbar {
+    height: 6rem;
+    border: solid 1px blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        height: 100%;
+        border: solid 1px red;
+        display: flex;
+        align-items: center;
+
+
+        &-image {
+
+        }
+
+        &-name {
+             height: 100%;
+             padding: 0;
+             border: solid 1px red;
+             display: flex;
+             align-items: center;
+             padding: 1rem 2rem;
+
+        }
+
+    }
+
+    
+    ul {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        list-style: none;
+        border: solid 1px blue;
+
+        li {
+        height: 100%;
+        padding: 0;
+        border: solid 1px red;
+
+            a {
+                align-items: center;
+                display: flex;
+                padding: 1rem 2rem;
+                height: 100%;
+                text-decoration: none;
+            }
+        }
+    }
+}
