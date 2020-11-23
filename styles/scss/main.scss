@@ -26,52 +26,38 @@ html {
 
 
 body {
-    font-family: var(--font-body);
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
-header {
+.header{
+padding: 0 3rem;
+background-color: #1a1a2e;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border: solid 1px blue;
 
+    &__logo {
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        color: lightskyblue;
+        
+    }
 }
 
 
 .navbar {
     height: 6rem;
     border: solid 1px blue;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &__logo {
-        height: 100%;
-        border: solid 1px red;
-        display: flex;
-        align-items: center;
-
-
-        &-image {
-
-        }
-
-        &-name {
-             height: 100%;
-             padding: 0;
-             border: solid 1px red;
-             display: flex;
-             align-items: center;
-             padding: 1rem 2rem;
-
-        }
-
-    }
-
     
     ul {
         align-items: center;
         display: flex;
         height: 100%;
         list-style: none;
-        border: solid 1px blue;
+        color: white;
 
         li {
         height: 100%;
@@ -79,6 +65,8 @@ header {
         border: solid 1px red;
 
             a {
+                color: white;
+                font-size: 2rem;
                 align-items: center;
                 display: flex;
                 padding: 1rem 2rem;
@@ -88,3 +76,238 @@ header {
         }
     }
 }
+
+
+.landing{
+    padding: 0 3rem;
+    background-color: #1a1a2e;
+    height: 100vh;
+    // background-image:url(/images/gabriele-garanzelli-PzO_CitnJdI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__container {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        font-size: 7rem;
+        width: 80rem;
+    }
+
+    &__heading {
+        color: white;
+
+        &--name {
+            color: #f05454;
+        }
+    }
+
+    &__subHeading {
+        color: lightpink;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section {
+padding: 3rem 4rem;
+
+    &__heading {
+        font-family: Helvetica, sans-serif;
+        font-size: 4rem;
+        margin: 2rem 0 4rem;
+        
+    }
+
+    &--header {
+        @extend .section; 
+        padding: 0 4rem;
+        background-color: #1a1a2e;
+    }
+
+    &--landing {
+        @extend .section;
+        background-color: #1a1a2e;
+        height: 100vh;
+    }
+
+     &--about {
+         @extend .section;
+         background-color: lightyellow;
+     }
+
+    &--projects {
+        @extend .section;
+        background-color: #F5F5F8;
+    }
+
+    &--contact {
+        @extend .section;
+        background-color: lightpink;
+        height: 60vh;
+    }
+
+    &--footer {
+        @extend .section;
+        background-color: #1a1a2e;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    .project {
+        border-radius: 15px;
+        overflow: hidden;
+        width: 34rem;
+        box-shadow: 0 6px 30px rgba(138, 149, 158, 0.4);
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__img-container {
+            background: salmon;
+            height: 20rem;
+            width: 100%;
+        }
+
+        &__content-container {
+            padding: 2rem;
+        }
+
+        &__name {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        &__description {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        &__software {
+            margin-bottom: 1rem;
+        }
+
+        &__links {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: solid 2px purple;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-right: 2rem;
+            
+
+            i {
+                font-size: 1.75rem;
+                padding-right: .8rem;
+               
+            }
+        }
+
+        &__software {
+            display: flex;
+            justify-content: flex-start;
+
+            i {
+                font-size: 4rem;
+            }
+        }
+    }
+
+
+    .contact {
+        margin: 0 auto;
+
+        &__heading {
+            font-size: 4rem;
+        }
+
+        &__text {
+
+        }
+
+        &__button {
+
+        }
+
+
+    }
+
+.footer {
+    padding: 3rem 3rem;
+    background-color: #1a1a2e;
+        &__content {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+             color: white;
+             border: solid 1px red;
+
+                a {
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    color: white;
+                    
+                    i {
+                        color: white;
+                        padding-right: .5rem;
+                    }
+                }
+        }
+
+        &__made {
+            font-size: 1.5rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1rem 0;
+
+        }
+
+            &__copyright {
+                color: white;
+                border-top: solid .1px purple;
+                font-size: 1.25rem;
+                padding-top: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+}
+
+
+
+  
