@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brad Meyn</title>
+    
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="styles/css/main.min.css">
 </head>
 
 <body>
-<header>
+<header class="header">
+    <div class="header__logo">
+            BJM
+    </div>
+
     <nav class="navbar">
-
-        <div class="navbar__logo">
-            <img src="" alt="" class="navbar__logo-image"><div class="navbar__logo-name">Brad Meyn</div>
-        </div>
-
         <ul class="navbar__links">
             <li class="navbar__links-container">
                 <a href="#" class="navbar__link">About Me</a>
@@ -26,25 +27,188 @@
             <li class="navbar__links-container">
                 <a href="#" class="navbar__link">Contact</a>
             </li>
+            
         </ul>
 
     </nav>
 </header>
+
 <main>
-    <section id="landing">
+
+    <section id="landing" class="landing">
+
+        <div class="landing__container">
+            <h1 class="landing__heading"> Hi, I'm <span class="landing__heading--name">Brad.</span></h1>
+            <span class="landing__subHeading">(amatuer) web developer.</span>
+            
+            <button class="landing__btn"> View My Work</button>
+        </div>
+        <!-- <div class="img__container">
+            <img src="/images/coding_.svg" alt="">
+        </div> -->
+        
+        
 
     </section>
-    <section id="about">
+
+    
+    
+    <section id="about" class="about">
+
+        <div class="about__imgContainer">
+            <!-- <img src="/images/CR0_0554 (1).jpg" alt="" class="about__img"> -->
+        </div>
+        <div class="about__textContainer">
+            <h2 class="about__heading">About Me</h2>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rerum maiores illum ipsam odio unde aut autem sint modi quos in voluptate inventore perspiciatis, ipsa quas expedita. Rem, est nihil.</p>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rerum maiores illum ipsam odio unde aut autem sint modi quos in voluptate inventore perspiciatis, ipsa quas expedita. Rem, est nihil.</p>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rerum maiores illum ipsam odio unde aut autem sint modi quos in voluptate inventore perspiciatis, ipsa quas expedita. Rem, est nihil.</p>
+        </div>
+        
+    
 
     </section>
-    <section id="projects">
+
+    <section id="projects" class="projects">
+    <h2 class="projects__heading">Projects</h2>
+    <p class="projects__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim harum fuga qui earum molestiae animi tenetur non architecto possimus itaque porro sunt inventore blanditiis voluptate, quas sit, sint nam praesentium.</p>
+    
+    <div class="project__container">
+
+        <div class="project">
+            <div class="project__imgContainer">
+                <img src="https://sh1ftdigital.com/wp-content/uploads/2019/12/ezgif-4-7f039bcd02a5-1024x577.gif" alt="" class="project__img">
+                <div class="project__links">
+                <a class="project__link">
+                    <i class="lab la-github"></i><span>Github</span> 
+                </a>
+                <a class="project__link">
+                    <i class="las la-laptop-code"></i></i> <span>Live Site</span> 
+                </a>
+            </div>
+        </div>
+            <div class="project__contentContainer">
+                <h3 class="project__name">Project</h3>
+                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In et ad, officia sint laudantium a dignissimos quas ex soluta laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
+                <div class="project__software">
+                    <i class="lab la-html5"></i>
+                    <i class="lab la-css3-alt"></i>
+                    <i class="lab la-sass"></i>
+                </div>
+            </div>  
+        </div>
+
+        <div class="project">
+            <div class="project__imgContainer">
+                <img src="https://sh1ftdigital.com/wp-content/uploads/2019/12/7-trulia-landing-page-768x486.png" alt="" class="project__img">
+                <div class="project__links">
+                <a class="project__link">
+                    <i class="lab la-github"></i><span>Github</span> 
+                </a>
+                <a class="project__link">
+                    <i class="las la-laptop-code"></i></i> <span>Live Site</span> 
+                </a>
+            </div>
+        </div>
+            <div class="project__contentContainer">
+                <h3 class="project__name">Project</h3>
+                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In et ad, officia sint laudantium a dignissimos quas ex soluta laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
+                <div class="project__software">
+                    <i class="lab la-html5"></i>
+                    <i class="lab la-css3-alt"></i>
+                    <i class="lab la-sass"></i>
+                </div>
+            </div>  
+        </div>
+        <div class="project">
+            <div class="project__imgContainer">
+                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2020/04/google-docs-landing-page.png" alt="" class="project__img">
+                <div class="project__links">
+                <a class="project__link">
+                    <i class="lab la-github"></i><span>Github</span> 
+                </a>
+                <a class="project__link">
+                    <i class="las la-laptop-code"></i></i> <span>Live Site</span> 
+                </a>
+            </div>
+        </div>
+            <div class="project__contentContainer">
+                <h3 class="project__name">Project</h3>
+                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In et ad, officia sint laudantium a dignissimos quas ex soluta laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
+                <div class="project__software">
+                    <i class="lab la-html5"></i>
+                    <i class="lab la-css3-alt"></i>
+                    <i class="lab la-sass"></i>
+                </div>
+            </div>  
+        </div>
+        <div class="project">
+            <div class="project__imgContainer">
+                <img src="https://cms-assets.tutsplus.com/uploads/users/2660/posts/35190/image/zimed-app-landing-page-html-template-J33MNVG.jpg" alt="" class="project__img">
+                <div class="project__links">
+                <a class="project__link">
+                    <i class="lab la-github"></i><span>Github</span> 
+                </a>
+                <a class="project__link">
+                    <i class="las la-laptop-code"></i></i> <span>Live Site</span> 
+                </a>
+            </div>
+        </div>
+            <div class="project__contentContainer">
+                <h3 class="project__name">Project</h3>
+                <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In et ad, officia sint laudantium a dignissimos quas ex soluta laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
+                <div class="project__software">
+                    <i class="lab la-html5"></i>
+                    <i class="lab la-css3-alt"></i>
+                    <i class="lab la-sass"></i>
+                </div>
+            </div>  
+        </div>
+        
+    </div>
 
     </section>
-    <section id="contact">
+    
+    <section id="contact" class="contact">
+
+        <div class="contact__container">
+            <h3 class="contact__heading">Contact Me</h3>
+            <p class="contact__text"> You can get in touch by using <span class="contact__text--email">brad@email.com</span> or directly below</p>
+
+            <form action="post">
+                
+                <div class="input">
+                    <label for="email" class="input__label">Email</label>
+                    <input type="email" class="input__box" id="email">
+                </div>
+                <div class="input">
+                    <label for="message" class="input__label">Message</label>
+                    <textarea class="input__box--text" name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="contact__buttonContainer">
+                <button class="contact__button">Submit</button>
+            </div>
+            </form>
+            
+        </div>
+
+        
 
     </section>
 </main>
-<footer>
+
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__made">
+            Made & designed by Brad Meyn
+        </div>
+        <a class="footer__github" href="https://github.com/bradmeyn" target="_blank">
+            <i class="lab la-github"></i>Github
+        </a>
+    </div>
+
+    <div class="footer__copyright">&#x24B8; Copyright 2020 Brad Meyn. All rights reserved.</div>
+    
 
 </footer>
 
