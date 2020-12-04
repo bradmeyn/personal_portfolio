@@ -1,6 +1,7 @@
 :root {
     /* Colours */
     --section-padding: 6rem 12rem;
+    --font-body:'Roboto', sans-serif;
 
 }
 
@@ -25,11 +26,12 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-body);
 
 }
 
@@ -90,8 +92,7 @@ justify-content: space-between;
 
 
 .landing {
-   background-image: linear-gradient(rgba(48, 71, 94, .1), rgba(48, 71, 94, 1)),
-   url(/images/pexels-eberhard-grossgasteiger-572897.jpg);
+   background-color:  rgba(48, 71, 94, 1);
     background-position: center;
     background-size: cover;
     padding: var(--section-padding);
@@ -151,39 +152,84 @@ justify-content: space-between;
 }
 
 
+//about section
+
+
 .about {
     background-color: white;
     padding: var(--section-padding);
-    min-height: 100vh;
-    display: flex;
+    
+     &__heading {
+        //  border: solid 1px blue;
+         text-align: center;
+         font-size: 3rem;
+         margin-bottom: 4rem;
+     }
 
-    // &__imgContainer{
-        
-    //    display: flex;
-    //    justify-content: center;
-    //    margin-right: 5rem;
-    //    align-items: flex-start;
-    //     width: 100%;
-    //     // overflow: hidden;
-        
-    // }
 
-    // &__img {
-    //     border: solid 3px #1a1a2e;
-        
-    //     border-radius: 20px;
-    // }
+    &__container{
+        // border: solid 1px green;
+        display: flex;
+        align-items: flex-start;
+    }
 
-    &__heading {
-        font-size: 3rem;
+    &__imgContainer{
+        
+        margin-right: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+        // border: solid 1px red;
+    }
+
+    &__img {
+        width: 25rem;
+        border-radius: 15px;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    &__textContainer {
+        padding-left: 3rem;
+        
     }
 
     &__text {
-        font-size: 1.5rem;
-        margin-top: 1rem;
+        text-align: justify;
+        font-size: 1.75rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
     }
 
-}
+    &__links{
+        
+        // border: solid 1px red;
+        width: 100%;
+        
+    }
+
+    &__link {
+        cursor: pointer;
+        display: flex;
+        padding: .5rem;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2rem;
+        border: solid 1px red;
+        text-decoration: none;
+
+        i {
+            color: salmon;
+            font-size: 3rem;
+            padding-right: .5rem;
+        }
+    }
+
+   
+    }
+
+
 
 
 .projects {
@@ -193,6 +239,7 @@ background-color:#F8F9F9;
 width: 100%;
 
 &__heading {
+    text-align: center;
     font-size: 3rem;
 }
 
@@ -284,7 +331,6 @@ width: 100%;
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            cursor: pointer;
             border: solid 2px #fff;
             border-radius: 15px;
             padding: 1.5rem;
@@ -402,7 +448,7 @@ width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 1rem auto;
+            margin: 0 auto;
            
 
             
@@ -412,7 +458,7 @@ width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
+            margin: 2rem auto;
             
             font-size: 2rem;
             text-decoration: none;
@@ -431,7 +477,7 @@ width: 100%;
                 color: white;
                 
                 font-size: 1.25rem;
-                padding-top: 4rem;
+                
                 width: 100%;
                 text-align: center;
             }
