@@ -91,6 +91,17 @@ body {
 }
 
 
+@keyframes fadeIn {
+    from {
+        transform: translateY(40px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
 .landing {
    background: #2b5876;
    /* fallback for old browsers */
@@ -116,14 +127,21 @@ body {
     }
 
     &__heading {
-        
+        animation: fadeIn 1s;
+        opacity: 0;
+        animation-fill-mode: both;
         font-size: 3rem;
+        color: #ffffff;
         
         &--name {
+            animation: fadeIn 1s;
+            opacity: 0;
+            animation-fill-mode: both;
+            animation-delay: .5s;
             font-size: 12rem;
             display: block;
             margin: 0;
-            color: black;
+            
         }
     }
 
@@ -182,9 +200,6 @@ body {
 
 //about section
 
-
-
-
 .about {
     background-color: #0C121F;
     color: #ffffff;
@@ -192,39 +207,31 @@ body {
     padding: var(--section-padding);
 
      &__container {
-         // width: 50%;
-         // border: solid 1px green;
          display: flex;
-         justify-content: space-between;
-         margin-bottom: 2rem;
-    
-         flex-wrap: wrap;
+        flex-wrap: wrap;
+         justify-content: center;
+        
      }
-    
+
      &__text {
-         // box-shadow: var(--box-shadow);
+         font-size: 1.5rem;
          min-width: 40rem;
-        flex: 1 1 50rem;
-         
-         //  box-shadow: var(--box-shadow);
-         border-radius: 4px;
-        //  border: solid 1px red;
-         margin-right: 2rem;
+         padding-right: 5rem;
      }
-
-     &__paragraph {
-
-         font-size: 1.8rem;
-         line-height: 1.66;
-         margin-bottom: 2rem;
-         padding-right: 2rem;
-     }
+        
     
      &__heading {
         //  border: solid 1px blue;
          font-size: 4rem;
          margin-bottom: 2rem;
      }
+
+     &__paragraph {
+         font-size: 1.6rem;
+         margin-bottom: 2rem;
+     }
+
+     
 
 
    
@@ -260,7 +267,7 @@ body {
 
         &__name {
             // text-align: center;
-            font-size: 3rem;
+        font-size: 3rem;
             margin-bottom: 1rem;
         }
 
@@ -331,8 +338,6 @@ body {
         }
 
 
-        
-
     }
 
 .projects {
@@ -358,7 +363,6 @@ body {
          }
     }
 
-
     .project {
         overflow: hidden;
         min-width: 30rem;
@@ -369,10 +373,7 @@ body {
         box-shadow: var(--box-shadow);
         border-radius: 15px;
 
-        &:hover {
-            transition: all .3s ease;
-            transform: translateY(-5px);
-        }
+       
 
         &__img {
             height: 24rem;
@@ -383,7 +384,7 @@ body {
             position: relative;
 
             img {
-                width: 120%;
+              width: 120%;
                 // width: 100%;
                 object-fit: cover;
             }
@@ -415,31 +416,54 @@ body {
                 line-height: 1.5;
                 margin-bottom: 1rem;
                 color: gray;
+                margin-bottom: 1.5rem;
             }
 
         }
 
-        &__link {
-            font-size: 1.5rem;
+        &__links {
+            font-size: 1.4rem;
+            
 
-            &:hover {
-                transition: all 0.3s ease-in;
-                opacity: 1;
-                background-color: rgba(0, 0, 0, 0.4);
+            .project-live {
+                text-decoration: none;
+                cursor: pointer;
+                background-color: rgb(255, 91, 72);
+                color: #ffffff;
+                border-radius: 15px;
+                margin-right: 2rem;
+                padding: .5rem 1rem;
+
+                &:hover {
+                    background-color: lighten(salmon, 3%);
+                    
+                }
             }
 
-            a {
+            .project-repo {
                 cursor: pointer;
-                
-                
-                color: #0A192F;
-                border-radius: 15px;
-                
-                i {
-                    font-size: 1.75rem;
-                    padding-right: .8rem;
+                color: rgb(255, 91, 72);
+                text-decoration: none;
+
+                &:hover {
+                    color: lighten(salmon, 3%);
+                    text-decoration: underline;
+                    
+                    i {
+                        
+                        transform: translateX(4px);
+                    }
+                    
 
                 }
+
+                
+                i {
+                    transition: transform .2s linear;
+                    margin-left: .5rem;
+                }
+
+                
             }
         }
     }
@@ -450,7 +474,6 @@ body {
 
     .contact {
         padding: var(--section-padding);
-        
         background:#0e2444;
         
         &__container{
@@ -571,11 +594,9 @@ body {
                 width: 100%;
                 text-align: center;
             }
-
-
-           
         }
         
+    
 
 
 
