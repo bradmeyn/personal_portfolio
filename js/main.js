@@ -1,5 +1,6 @@
 
-let ham = document.querySelector(".header__ham");
+
+let ham = document.querySelector(".hamburger");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
   
