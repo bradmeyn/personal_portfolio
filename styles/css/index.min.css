@@ -6,12 +6,18 @@
   --text-dark: #091b30;
   --secondary: #ff5a48;
   --secondary-light: #fd7061;
-  --section-padding: 5rem 12rem;
+  --section-padding: 5rem 10rem;
+  --mobile-padding:  6rem;
   --font-body:'Roboto', sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   --margin-small: .5rem;
   --margin-medium: 1rem;
   --margin-large: 2rem;
+  --fs-vs: 1rem;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.7rem;
+  --fs-lg: 2.5rem;
+  --heading-standard: 4rem;
 }
 
 html {
@@ -39,11 +45,11 @@ body.blurry .content {
 
 .header {
   padding: 0 4rem;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
   width: 100%;
   height: 8rem;
-  background-color: rgba(10, 25, 47, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,7 +83,7 @@ body.blurry .content {
   position: relative;
   margin: 0 auto;
   height: 3rem;
-  width: 3rem;
+  width: 2.8rem;
   padding: 2rem;
 }
 
@@ -104,6 +110,12 @@ body.blurry .content {
 
 .hamburger__line::after {
   top: -10px;
+}
+
+.hamburger.active {
+  position: fixed;
+  right: 4rem;
+  z-index: 100;
 }
 
 .hamburger.active .hamburger__line, .hamburger.active .hamburger__line::before, .hamburger.active .hamburger__line::after {
@@ -214,8 +226,9 @@ body.blurry .content {
 }
 
 .landing {
+  position: relative;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-  padding: var(--section-padding);
+  padding: var(--mobile-padding);
   height: 100vh;
 }
 
@@ -223,15 +236,13 @@ body.blurry .content {
   position: relative;
   top: 45%;
   transform: translateY(-50%);
-  font-size: 5rem;
-  border: solid 1px red;
 }
 
 .landing__heading {
   animation: fadeIn .75s;
   opacity: 0;
   animation-fill-mode: both;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--white);
 }
 
@@ -240,14 +251,14 @@ body.blurry .content {
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: .5s;
-  font-size: 12rem;
+  font-size: 8rem;
   display: block;
   margin: 0;
   color: var(--text-dark);
 }
 
 .landing__subheading {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--white);
   margin-bottom: var(--margin-large);
   animation: fadeInRight 1s;
@@ -296,7 +307,7 @@ body.blurry .content {
   background-color: #0C121F;
   color: var(--white);
   font-weight: 300;
-  padding: var(--section-padding);
+  padding: var(--mobile-padding);
 }
 
 .about__container {
@@ -307,7 +318,7 @@ body.blurry .content {
 }
 
 .about__heading {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -315,16 +326,15 @@ body.blurry .content {
 .about__heading::after {
   color: var(--white);
   position: absolute;
-  font-size: 3rem;
   content: "";
   width: 5rem;
   border-bottom: 2px solid var(--secondary-light);
-  top: 55px;
+  top: 45px;
   left: 0;
 }
 
 .about__paragraph, .contact__text, .contact__text--email {
-  font-size: 2rem;
+  font-size: var(--fs-md);
   line-height: 1.5;
   margin-bottom: 2rem;
   color: #c9c9c9;
@@ -338,14 +348,15 @@ body.blurry .content {
   background-color: #091b30;
   border-radius: 15px;
   margin: 0 auto;
+  width: 45rem;
 }
 
 .about .card__img {
   border-radius: 50%;
   overflow: hidden;
   object-fit: contain;
-  width: 12rem;
-  height: 12rem;
+  width: 11rem;
+  height: 11rem;
   margin-right: 2rem;
 }
 
@@ -365,7 +376,7 @@ body.blurry .content {
 }
 
 .about .card__detail {
-  font-size: 1.6rem;
+  font-size: var(--fs-sm);
   margin-bottom: var(--margin-small);
 }
 
@@ -379,7 +390,7 @@ body.blurry .content {
 }
 
 .projects {
-  padding: var(--section-padding);
+  padding: var(--mobile-padding);
   background-color: var(--background-light);
   width: 100%;
 }
@@ -404,7 +415,7 @@ body.blurry .content {
 }
 
 .projects__text {
-  font-size: 1.6rem;
+  font-size: var(--fs-md);
   line-height: 1.5;
 }
 
@@ -441,6 +452,7 @@ body.blurry .content {
 
 .project__tech {
   margin-bottom: var(--margin-medium);
+  font-size: var(--fs-vs);
 }
 
 .project__tech .tech {
@@ -461,15 +473,15 @@ body.blurry .content {
 }
 
 .project__content p {
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: var(--fs-sm);
+  line-height: 1.3;
   margin-bottom: var(--margin-medium);
   color: gray;
   margin-bottom: 1.5rem;
 }
 
 .project__links {
-  font-size: 1.4rem;
+  font-size: var(--fs-sm);
 }
 
 .project__links .project-live {
@@ -510,7 +522,7 @@ body.blurry .content {
 }
 
 .contact {
-  padding: var(--section-padding);
+  padding: var(--mobile-padding);
   background: #091b30;
   text-align: center;
 }
@@ -528,10 +540,11 @@ body.blurry .content {
 }
 
 .contact__text {
-  font-size: 1.5rem;
+  font-size: var(--fs-md);
 }
 
 .contact__text--email {
+  font-size: var(--fs-md);
   font-size: 1.5rem;
   transition: all linear .3s;
   text-decoration: none;
@@ -635,7 +648,7 @@ body.blurry .content {
   opacity: 0;
   margin-top: .5rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--fs-md);
   font-weight: 500;
   transform: translateY(-25px);
   color: var(--white);
@@ -665,7 +678,7 @@ body.blurry .content {
 
 .footer__copyright {
   color: white;
-  font-size: 1.5rem;
+  font-size: var(--fs-md);
   width: 100%;
   text-align: center;
 }
@@ -691,6 +704,8 @@ body.blurry .content {
     background-color: transparent;
     z-index: 2;
     transition: none;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .header .hamburger {
     display: none;
