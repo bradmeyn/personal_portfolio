@@ -14,92 +14,82 @@
     <link rel="stylesheet" href="styles/css/index.min.css">
 </head>
 
-<body >
-    
-
-    
+<body>
     
     <header class="header" id="header">
+        
         <div class="header__logo">
             <i class="fas fa-code"></i>
         </div>
         <button class="hamburger">
             <div class="hamburger__box">
                 <div class="hamburger__line"></div>
-            </div>  
-            
+            </div> 
         </button>
-
-    <nav class="navbar">
-        <ul class="navbar__links">
-            <li class="navbar__links-container">
-                <a href="#" class="navbar__link">About</a>
-            </li>
-            <li class="navbar__links-container">
-                <a href="#" class="navbar__link">Projects</a>
-            </li>
-            <li class="navbar__links-container">
-                <a href="#" class="navbar__link">Contact</a>
-            </li>
-        </ul>
-
-        <nav class="link__navbar">
-        <a href="#" class="link">
-            <span class="link__icon"><i class="fab fa-github"></i>
-                <div class="link__name">Github</div>
-            </span>
-        </a>
-        <a class="link">
-            <span class="link__icon"><i class="fas fa-file-alt"></i>
-            <div class="link__name">Resume</div>
-            </span>
-        </a>
-        
-        <a class="link">
-            <span class="link__icon"><i class="fab fa-instagram"></i>
-            <div class="link__name">Instagram</div>
-            </span>
-        </a>                
-</nav> 
-        
-    </nav>
-    
-    </header>
-<div class="content">
-<main>
-    
-    <section id="landing" class="landing">
-        <video src="./videos/production ID_4818978 (2).mp4" muted loop autoplay></video>
-        <div class="landing__container">
+        <nav class="navbar">
+            <ul class="navbar__links">
+                <li class="navbar__links-container">
+                    <a href="#" class="navbar__link">About</a>
+                </li>
+                <li class="navbar__links-container">
+                    <a href="#" class="navbar__link">Projects</a>
+                </li>
+                <li class="navbar__links-container">
+                    <a href="#" class="navbar__link">Contact</a>
+                </li>
+            </ul>
+            <nav class="link__navbar">
+            <a href="#" class="link">
+                <span class="link__icon"><i class="fab fa-github"></i>
+                    <div class="link__name">Github</div>
+                </span>
+            </a>
+            <a class="link">
+                <span class="link__icon"><i class="fas fa-file-alt"></i>
+                <div class="link__name">Resume</div>
+                </span>
+            </a>
             
-            <h1 class="landing__heading"> Hi, my name is <span class="landing__heading--name">Brad.</span></h1>
-            <p class="landing__intro"> Welcome to my website</p>
+            <a class="link">
+                <span class="link__icon"><i class="fab fa-instagram"></i>
+                <div class="link__name">Instagram</div>
+                </span>
+            </a>                
+            </nav>
+        </nav>
+   
+    </header>
+
+<div class="content">
+
+<main>
+
+    <!-- Landing Section------------------------------------ -->
+    <section id="landing" class="landing">
+       
+        <div class="landing__content content-container">
+            <h1 class="landing__heading"> Hi, my name is <span class="landing__heading--name">Brad Meyn.</span></h1>
+            <p class="landing__subheading"> I want to become a professional developer. </p>
             <div class="landing__buttons">
                 <button class="btn">My Work</button>
                 <button class="btn--secondary">My Resume</button>
             </div>
-            
-        
         </div>
-       
-        
-        <!-- <div class="img__container">
-            <img src="/images/coding_.svg" alt="">
-        </div> -->
-        
     </section>
 
+    <!-- About Section------------------------------------ -->
+
     <section id="about" class="about" >
-        <div class="about__container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="about__content content-container" data-aos="fade-up" data-aos-duration="1000">
             <div class="about__text">
                 <h2 class="about__heading">About Me</h2>
-                <p class="about__paragraph">My name is Brad. I was interested in how websites are made, so I started learning web development.</p>
-                <p class="about__paragraph">For me, development is purely a hobby. My plan was learn to code & try to replicate various investment tools I'd made for work.</p>
-                <p class="about__paragraph">Going from knowing nothing about programming to being able to build things on the web has been a very rewarding process. After squeezing in development time around work and family I've come to the realisation this is what I want to do for a career.</p>
+                <p class="about__paragraph">I started development as a hobby. My initial plan was to learn how websites are made so I could potentially build some investment related tools for work. Each morning before work I'd sit and go through online courses from Udemy and slowly build up my knowledge.</p>
+                <p class="about__paragraph">After squeezing in development time around work and family I've come to the realisation this is what I want to do for a career.I enjoy programming because you are constantly learning new things and there are so many "aha" moments where you figure out how something works.</p>
+                <p class="about__paragraph">From a language standpoint I've predominatly focused on frontend development (HTML, CSS & Javascript), with some exposure to backend languages and frameworks via Udemy courses (NodeJS, Express & MongoDB). </p>
             </div>
             <div class="card" data-aos="fade-up" data-aos-duration="1000">
                 <div class="card__img">
-                    <img src="./images/CR0_0554 (1).jpg" alt="" class="profile__img">
+                    <img src="./images/Me.jpg" alt="" class="profile__img">
                 </div>
                 <div class="card__content">
                     <h3 class="card__heading">Brad Meyn</h3>
@@ -111,7 +101,10 @@
         </div>
     </section>
 
+    <!-- About Section------------------------------------ -->
+
     <section id="projects" class="projects">
+        <div class="content-container">
         <h2 class="projects__heading">Projects</h2>
         <p class="projects__text">Below are some projects I've made to highlight my skill with various technologies & concepts.</p>
         <div class="projects__container">
@@ -175,33 +168,13 @@
                     </div>  
                 </div>  
             </div>
-            <div class="project" data-aos="fade-up" data-aos-duration="1000">
-                <div class="project__img">
-                    <img src="https://cms-assets.tutsplus.com/uploads/users/2660/posts/35190/image/zimed-app-landing-page-html-template-J33MNVG.jpg" alt="">
-                </div>
-                <div class="project__content">
-                    <div class="project__tech">
-                        <span class="tech">HTML</span>
-                        <span class="tech">CSS</span>
-                        <span class="tech">JS</span>
-                        <span class="tech">NODE</span>
-                    </div>
-                    <h3 class="project__name">Project</h3>
-                    <p class="project__description"> laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
-                    <div class="project__links">
-                        <a class="project-live" href="">Visit Site</a>
-                        <a class="project-repo" href="">View Repo<i class="fas fa-angle-right"></i></a>
-                        
-                    </div>  
-                </div>  
-            </div>
-
         </div>
+    </div>
     </section>
     
     <section id="contact" class="contact">
 
-        <div class="contact__container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="contact__content content-container" data-aos="fade-up" data-aos-duration="1000">
             <h3 class="contact__heading">Contact Me</h3>
             <p class="contact__text"> You can contact me using <a class="contact__text--email" href="#"> bradmakesweb@dev.com</a> or via the form below. </p>
             
@@ -255,6 +228,8 @@
 
     </section>
 </main>
+
+</div>
 
 <footer class="footer">
     <div class="footer__container">
