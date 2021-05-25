@@ -1,11 +1,15 @@
 :root {
   /* Colours */
   --white: #ffffff;
-  --background-dark:#010203;
+  --background-dark:#120b1f;
   --background-light: #F5F5F8;
-  --text-dark: #091b30;
-  --primary: rgba(24, 37, 56, 1);
-  --secondary: #ff5a48;
+  --text-dark: rgb(121, 127, 148);
+  --text-darker: rgb(76, 87, 121);
+  --text-darkest:rgb(23, 31, 58);
+  --text-light:rgb(229, 236, 252);
+  --text-lightest: #ffffff;
+  --primary: rgb(21, 30, 49);
+  --secondary: #ff5d4b;
   --secondary-light: #fd7061;
   --section-padding: 5rem 10rem;
   --mobile-padding:  5rem 4rem;
@@ -22,7 +26,7 @@
   --hs-vs: 1.5rem;
   --hs-sm: 2rem;
   --hs-md: 2.5rem;
-  --hs-lg: 5rem;
+  --hs-lg: 5.5rem;
 }
 
 @keyframes fadeIn {
@@ -75,6 +79,7 @@ body.blurry .content {
   z-index: 2;
   width: 100%;
   height: 8rem;
+  max-width: 108rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,7 +104,6 @@ body.blurry .content {
   background-color: transparent;
   cursor: pointer;
   height: 5rem;
-  width: 5rem;
   border: none;
 }
 
@@ -112,11 +116,23 @@ body.blurry .content {
   padding: 2rem;
 }
 
+.hamburger__box:hover .hamburger__line, .hamburger__box:hover .hamburger__line::before, .hamburger__box:hover .hamburger__line::after {
+  background-color: var(--secondary);
+}
+
+.hamburger__box:hover .hamburger__line:before {
+  transform: translate(-80%, 0);
+}
+
+.hamburger__box:hover .hamburger__line:after {
+  transform: translate(-80%, 0);
+}
+
 .hamburger__line, .hamburger__line::before, .hamburger__line::after {
-  background-color: #ffffff;
+  background-color: var(--text-light);
   margin: 0 auto;
   transition: 0.5s;
-  width: 100%;
+  width: 3rem;
   height: 2px;
   position: absolute;
   top: 50%;
@@ -151,14 +167,14 @@ body.blurry .content {
   top: 0;
   left: 0;
   transform: rotate(135deg);
-  background-color: var(--white);
+  background-color: var(--secondary);
 }
 
 .hamburger.active .hamburger__line::before {
   top: 0;
   left: 0;
   transform: rotate(45deg);
-  background-color: var(--white);
+  background-color: var(--secondary);
 }
 
 .hamburger.active + .navbar {
@@ -199,7 +215,7 @@ body.blurry .content {
 }
 
 .navbar ul li a {
-  color: var(--white);
+  color: var(--text-light);
   font-size: 3rem;
   align-items: center;
   display: flex;
@@ -226,15 +242,19 @@ body.blurry .content {
   transition: all .5s;
 }
 
+.navbar ul li a:hover {
+  color: var(--text-lightest);
+}
+
 .navbar ul li a:hover:after {
   width: 60%;
 }
 
 .landing {
   position: relative;
-  background-image: linear-gradient(rgba(24, 37, 56, 0.2), rgba(24, 37, 56, 0.2)), url(/images/diego-ph-5LOhydOtTKU-unsplash.jpg);
+  background-image: linear-gradient(rgba(24, 37, 56, 0.6), rgba(24, 37, 56, 0.6)), url(/images/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg);
   background-size: cover;
-  background-origin: bottom;
+  background-position: top;
   padding: var(--mobile-padding);
   height: 100vh;
 }
@@ -250,7 +270,7 @@ body.blurry .content {
   opacity: 0;
   animation-fill-mode: both;
   font-size: var(--fs-md);
-  color: var(--white);
+  color: var(--text-light);
   margin-bottom: var(--margin-md);
 }
 
@@ -262,12 +282,12 @@ body.blurry .content {
   font-size: var(--hs-lg);
   display: block;
   margin-bottom: var(--margin-sm);
-  color: white;
+  color: var(--text-lightest);
 }
 
 .landing__subheading {
   font-size: var(--fs-xl);
-  color: var(--white);
+  color: var(--text-light);
   margin-bottom: var(--margin-lg);
   animation: fadeInRight 1s;
   opacity: 0;
@@ -313,7 +333,6 @@ body.blurry .content {
 
 .about {
   background-color: var(--primary);
-  color: var(--white);
   font-weight: 300;
   padding: var(--mobile-padding);
 }
@@ -325,6 +344,7 @@ body.blurry .content {
 }
 
 .about__text {
+  color: var(--text-light);
   min-width: 35rem;
 }
 
@@ -332,6 +352,7 @@ body.blurry .content {
   font-size: var(--hs-md);
   margin-bottom: var(--margin-lg);
   position: relative;
+  color: var(--text-lightest);
 }
 
 .about__heading::after {
@@ -348,12 +369,12 @@ body.blurry .content {
   font-size: var(--fs-md);
   line-height: 1.5;
   margin-bottom: 2rem;
-  color: #c9c9c9;
 }
 
 .about .card {
-  padding: 2rem 4rem;
-  background-image: linear-gradient(45deg, #5e3672 0%, #5b757c 100%);
+  padding: 2rem 3rem;
+  background-image: linear-gradient(45deg, #69417c 0%, #687c99 100%);
+  background-image: linear-gradient(-225deg, #4d5a81 0%, #4f3350 100%);
   border-radius: 15px;
   margin: 0 auto;
   min-width: 37rem;
@@ -370,7 +391,7 @@ body.blurry .content {
 
 .about .card__img {
   border-radius: 50%;
-  border: solid 2px var(--secondary);
+  border: solid 2px var(--secondary-light);
   overflow: hidden;
   object-fit: contain;
   width: 12rem;
@@ -392,21 +413,23 @@ body.blurry .content {
 .about .card__heading {
   text-align: center;
   font-size: var(--hs-sm);
+  color: var(--text-lightest);
   margin-bottom: var(--margin-md);
 }
 
 .about .card__detail {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
+  color: var(--text-light);
   margin: 0 auto;
   margin-bottom: var(--margin-sm);
 }
 
 .about .card__detail .icon {
   display: inline-block;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   text-decoration: none;
   color: var(--secondary-light);
-  width: 3rem;
+  width: 2.2rem;
   text-align: center;
 }
 
@@ -417,6 +440,7 @@ body.blurry .content {
 .about .card__skills .skills-heading {
   font-size: var(--hs-vs);
   margin-bottom: var(--margin-md);
+  color: var(--text-lightest);
 }
 
 .about .card__skills .skill-container {
@@ -424,10 +448,11 @@ body.blurry .content {
 }
 
 .about .card__skills .skill-list {
+  color: var(--text-light);
   width: 50%;
   margin-left: 4rem;
   list-style: none;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
 }
 
 .about .card__skills .skill-item {
@@ -439,7 +464,6 @@ body.blurry .content {
   position: absolute;
   top: 50%;
   left: -2rem;
-  color: white;
   content: " ";
   height: 2px;
   width: 1rem;
@@ -455,7 +479,7 @@ body.blurry .content {
 .projects__heading {
   font-size: var(--hs-md);
   margin-bottom: var(--margin-lg);
-  color: #0C121F;
+  color: var(--text-darkest);
   text-align: center;
   position: relative;
 }
@@ -465,7 +489,7 @@ body.blurry .content {
   font-size: 3rem;
   content: "";
   width: 5rem;
-  border-bottom: 2px solid #f16f61;
+  border-bottom: 2px solid var(--secondary);
   left: 50%;
   transform: translateX(-50%);
   top: 38px;
@@ -473,7 +497,9 @@ body.blurry .content {
 
 .projects__text {
   font-size: var(--fs-md);
+  color: var(--text-darker);
   line-height: 1.5;
+  text-align: center;
 }
 
 .projects__container {
@@ -484,11 +510,11 @@ body.blurry .content {
 
 .project {
   overflow: hidden;
-  min-width: 33rem;
+  min-width: 30rem;
   max-width: 35rem;
   margin: 2rem 2rem 2rem 0;
   flex: 1;
-  background-color: var(--white);
+  background-color: #ffffff;
   box-shadow: var(--box-shadow);
   border-radius: 15px;
 }
@@ -504,8 +530,16 @@ body.blurry .content {
 }
 
 .project__img img {
-  width: 120%;
-  object-fit: cover;
+  position: relative;
+  width: 80%;
+  object-fit: contain;
+  object-position: left;
+  transition: all .6s ease;
+  border-radius: 12;
+}
+
+.project__img:hover img {
+  width: 70%;
 }
 
 .project__tech {
@@ -514,7 +548,8 @@ body.blurry .content {
 }
 
 .project__tech .tech {
-  background-color: lightblue;
+  background-color: #d1e8fd;
+  color: var(--text-darker);
   border-radius: 15px;
   padding: .25rem .5rem;
   margin-right: .25rem;
@@ -534,7 +569,7 @@ body.blurry .content {
   font-size: var(--fs-sm);
   line-height: 1.3;
   margin-bottom: var(--margin-lg);
-  color: gray;
+  color: var(--text-dark);
 }
 
 .project__links .project-live {
@@ -588,14 +623,14 @@ body.blurry .content {
 
 .contact__heading {
   text-align: center;
-  color: var(--white);
+  color: var(--text-lightest);
   font-size: var(--hs-md);
   margin-bottom: var(--margin-lg);
   position: relative;
 }
 
 .contact__text {
-  color: white;
+  color: var(--text-light);
   font-size: var(--fs-md);
   line-height: 1.5;
   padding-bottom: var(--margin-md);
@@ -609,7 +644,6 @@ body.blurry .content {
 }
 
 .contact__text--email:hover {
-  color: var(--secondary-light);
   text-decoration: underline;
 }
 
@@ -629,20 +663,22 @@ body.blurry .content {
 }
 
 .form__input .label {
-  color: var(--white);
+  color: var(--text-lightest);
+  font-weight: 700;
   display: block;
   text-align: left;
-  font-size: 1.5rem;
-  margin-bottom: var(--margin-sm);
+  font-size: var(--hs-sm);
+  margin-bottom: var(--margin-md);
 }
 
 .form__input .input, .form__input .input--textarea {
   border: none;
-  background-color: #233953;
-  color: #cecdcd;
+  background-color: #212f4e;
+  color: #e9edf5;
   font-size: 1.5rem;
   padding: 1rem;
   width: 100%;
+  border: solid 1px #212f4e;
   border-radius: 5px;
 }
 
@@ -651,12 +687,12 @@ body.blurry .content {
 }
 
 .form__input .input::placeholder, .form__input .input--textarea::placeholder {
-  color: #7f95b1;
+  color: #b3c1de;
 }
 
 .form__input .input:focus, .form__input .input--textarea:focus, .form__input .input:active, .form__input .input--textarea:active {
   outline: none;
-  border: solid 1px #7f95b1;
+  border: solid 1px #a2d3f3;
 }
 
 .form__btn {
@@ -687,9 +723,8 @@ body.blurry .content {
 .link {
   font-size: 3rem;
   cursor: pointer;
-  padding: 0 2.5rem;
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-lightest);
   text-align: center;
   width: 10rem;
 }
@@ -708,12 +743,14 @@ body.blurry .content {
   font-size: var(--fs-md);
   font-weight: 500;
   transform: translateY(-25px);
-  color: var(--white);
+  color: var(--text-lightest);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .link:hover .link__name, .link:focus {
   transition: all ease .5s;
-  transform: translateY(5px);
+  transform: translateY(10px);
   opacity: 1;
 }
 
@@ -726,15 +763,11 @@ body.blurry .content {
 .footer {
   text-align: center;
   padding: 4rem;
-  background-color: #0C121F;
-}
-
-.footer__container {
-  color: white;
+  background-color: #0d131f;
 }
 
 .footer__copyright {
-  color: white;
+  color: var(--text-light);
   font-size: var(--fs-md);
   width: 100%;
   text-align: center;
@@ -754,7 +787,6 @@ body.blurry .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8rem;
     position: absolute;
     top: 0;
     width: 100%;
@@ -809,7 +841,7 @@ body.blurry .content {
   .navbar ul li a {
     height: 100%;
     width: 100%;
-    color: #ffffff;
+    color: var(--text-light);
     font-size: 2.2rem;
     font-weight: 700;
     padding: 1rem 2rem;
@@ -828,6 +860,9 @@ body.blurry .content {
     color: transparent;
     height: 2px;
     transition: all .5s;
+  }
+  .navbar ul li a:hover {
+    color: var(--text-lightest);
   }
   .navbar ul li a:hover:after {
     width: 80%;
