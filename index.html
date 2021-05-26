@@ -71,7 +71,7 @@
        
         <div class="landing__content content-container">
             <h1 class="landing__heading"> <div class="landing__heading--intro">Hi, my name is </div> <div class="landing__heading--name">Brad Meyn.</div></h1>
-            <p class="landing__subheading"> Welcome to my website. </p>
+            <p class="landing__subheading"> Welcome to my site. </p>
             <div class="landing__buttons">
                 <button class="btn">My Work</button>
                 <!-- <button class="btn--secondary">My Resume</button> -->
@@ -82,15 +82,16 @@
     <!-- About Section------------------------------------ -->
 
     <section id="about" class="about" >
-        <div class="about__content content-container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="about__content content-container">
+            <h2 class="about__heading" data-aos="fade-up" data-aos-duration="1000">About Me</h2>
             <div class="about__text">
-                <h2 class="about__heading">About Me</h2>
-                <p class="about__paragraph">I started development as a hobby. My initial plan was to learn how websites are made so I could potentially build some investment related tools for work. Each morning before work I'd sit and go through online courses from Udemy and slowly build up my knowledge.</p>
-                <p class="about__paragraph">After squeezing in development time around work and family I've come to the realisation this is what I want to do for a career. I enjoy programming because you are constantly learning new things and there are so many "aha" moments where you figure out how something works.</p>
-                <p class="about__paragraph">From a language standpoint I've predominatly focused on frontend development (HTML, CSS & Javascript), with some exposure to backend languages and frameworks via Udemy courses (NodeJS, Express & MongoDB). </p>
+                
+                <p class="about__paragraph"data-aos="fade-up" data-aos-duration="1000">I started development as a hobby. My initial plan was to learn how websites are made so I could potentially build some investment related tools for work. Each morning before work I'd sit and go through online courses from Udemy and slowly build up my knowledge.</p>
+                <p class="about__paragraph"data-aos="fade-up" data-aos-duration="1000">After squeezing in development time around work and family I've come to the realisation this is what I want to do for a career. I enjoy programming because you are constantly learning new things and there are so many "aha" moments where you figure out how something works.</p>
+                <p class="about__paragraph"data-aos="fade-up" data-aos-duration="1000">From a language standpoint I've predominatly focused on frontend development (HTML, CSS & Javascript), with some exposure to backend languages and frameworks via Udemy courses (NodeJS, Express & MongoDB). </p>
             </div>
 
-            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card" data-aos="fade-up" data-aos-duration="1100">
                 <div class="card__profile">
 
                 <div class="card__img">
@@ -100,7 +101,7 @@
                     <h3 class="card__heading">Brad Meyn</h3>
                     <div class="card__detail"><span class="icon"><i class="fas fa-map-marker-alt"></i></span> <span>Newcastle, Australia</span> </div>
                     <div class="card__detail"><span class="icon"><i class="fas fa-graduation-cap"></i></span> <span>Bachelor of Business & Commerce</span> </div>
-           
+                    
                 </div>
             </div>
                 <div class="card__skills">
@@ -129,8 +130,8 @@
 
     <section id="projects" class="projects">
         <div class="content-container">
-        <h2 class="projects__heading">Projects</h2>
-        <p class="projects__text">Below are some projects I've made to highlight my skill with various technologies & concepts.</p>
+        <h2 class="projects__heading" data-aos="fade-up" data-aos-duration="900">Projects</h2>
+        <p class="projects__text" data-aos="fade-up" data-aos-duration="1000">Below are some projects I've made to highlight my skill with various technologies & concepts.</p>
         <div class="projects__container">
 
             <div class="project" data-aos="fade-up" data-aos-duration="1000">
@@ -199,51 +200,26 @@
     
     <section id="contact" class="contact">
 
-        <div class="contact__content content-container" data-aos="fade-up" data-aos-duration="1000">
-            <h3 class="contact__heading">Contact Me</h3>
-            <p class="contact__text"> If you would like to get in touch please email me at <a class="contact__text--email" href="#"> bradmakesweb@dev.com</a> or via the form below. </p>
-            
-            <form action="mailto:bradjmeyn@gmail.com" method="POST">
-                <div class="form">
-                    <div class="form__inputs">
-                        <div class="form__input">
-                            <label for="name" class="label">Name</label>
-                            <input type="text" class="input" id="name" placeholder="Name" name="name">
-                        </div>
-
-                        <div class="form__input">
-                            <label for="email" class="label">Email</label>
-                            <input type="email" class="input" id="email" placeholder="Email" name="email">
-                        </div>
-
-                        <div class="form__input">
-                            <label for="message" class="label">Message</label>
-                            <textarea type="text" class="input--textarea" id="message" placeholder="Message..." name="message" rows="10"></textarea>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="form__btn"><i class="fas fa-paper-plane"></i>Send</button>
-
-                </div>
-            </form>
-            
- 
-            <nav class="link__navbar">
-                        <a href="#" class="link">
-                            <span class="link__icon"><i class="fab fa-github"></i>
-                                <div class="link__name">Github</div>
-                            </span>
-                        </a>
-                        <a class="link">
-                            <span class="link__icon"><i class="fas fa-file-alt"></i>
-                            <div class="link__name">Resume</div>
-                            </span>
-                        </a>
-                        <a class="link">
-                            <span class="link__icon"><i class="fab fa-instagram"></i>
-                            <div class="link__name">Instagram</div>
-                            </span>
-                        </a>                
+        <div class="contact__content content-container">
+            <h3 class="contact__heading" data-aos="fade-up" data-aos-duration="1000">Contact Me</h3>
+            <p class="contact__text" data-aos="fade-up" data-aos-duration="1000"> I am currently seeking a entry-level developer job to start my career. If you have a role I would be suitable for or you would like more information please email contact me using <a class="contact__text--email" href="#"> bradjmeyn@gmail.com</a></p>
+            <button  class="contact__btn" data-aos="zoom-in" data-aos-duration="1000"><i class="fas fa-paper-plane"></i>Email</button>
+            <nav class="link__navbar" data-aos="zoom-in" data-aos-duration="1000">
+                <a href="#" class="link">
+                    <span class="link__icon"><i class="fab fa-github"></i>
+                        <div class="link__name">Github</div>
+                    </span>
+                </a>
+                <a class="link">
+                    <span class="link__icon"><i class="fas fa-file-alt"></i>
+                    <div class="link__name">Resume</div>
+                    </span>
+                </a>
+                <a class="link">
+                    <span class="link__icon"><i class="fab fa-instagram"></i>
+                    <div class="link__name">Instagram</div>
+                    </span>
+                </a>                         
             </nav>  
         </div>
     </section>
