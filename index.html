@@ -11,6 +11,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/css/index.min.css">
 </head>
 
@@ -29,18 +30,18 @@
 
         <nav class="navbar">
             <ul class="navbar__links">
-                <li class="navbar__links-container">
-                    <a href="#" class="navbar__link">About</a>
+                <li class="navbar__link-container">
+                    <a href="#about" class="navbar__link">About</a>
                 </li>
-                <li class="navbar__links-container">
-                    <a href="#" class="navbar__link">Projects</a>
+                <li class="navbar__link-container">
+                    <a href="#projects" class="navbar__link">Projects</a>
                 </li>
-                <li class="navbar__links-container">
-                    <a href="#" class="navbar__link">Contact</a>
+                <li class="navbar__link-container">
+                    <a href="#contact" class="navbar__link">Contact</a>
                 </li>
             </ul>
             <nav class="link__navbar">
-            <a href="#" class="link">
+            <a href="https://github.com/bradmeyn" target="_blank" class="link">
                 <span class="link__icon"><i class="fab fa-github"></i>
                     <div class="link__name">Github</div>
                 </span>
@@ -50,7 +51,7 @@
                 <div class="link__name">Resume</div>
                 </span>
             </a>
-            <a class="link">
+            <a class="link" href="mailto:bradjmeyn@gmail.com">
                 <span class="link__icon"><i class="fas fa-envelope"></i>
                 <div class="link__name">Email</div>
                 </span>
@@ -67,13 +68,13 @@
 <main>
 
     <!-- Landing Section------------------------------------ -->
-    <section id="landing" class="landing">
+    <section id="landing" class="landing" id="particle-js">
        
         <div class="landing__content content-container">
             <h1 class="landing__heading"> <div class="landing__heading--intro">Hi, my name is </div> <div class="landing__heading--name">Brad Meyn.</div></h1>
             <p class="landing__subheading"> Welcome to my site. </p>
             <div class="landing__buttons">
-                <button class="btn">My Work</button>
+                <a href="#projects"><button class="btn">My Work</button></a>
                 <!-- <button class="btn--secondary">My Resume</button> -->
             </div>
         </div>
@@ -95,7 +96,7 @@
                 <div class="card__profile">
 
                 <div class="card__img">
-                    <img src="./images/Me.jpg" alt="" class="profile__img">
+                    <img src="./images/me_compressed.jpg" alt="" class="profile__img">
                 </div>
                 <div class="card__content">
                     <h3 class="card__heading">Brad Meyn</h3>
@@ -135,48 +136,48 @@
         <div class="projects__container">
 
             <div class="project" data-aos="fade-up" data-aos-duration="1000">
-                <div class="project__img">
-                    <img src="/images/browser (3).png" alt="">
+                <div class="project__img" id="one">
+                    <img src="/images/Investment_Calc_image.png" alt="">
+                </div>
+                <div class="project__content">
+                    <div class="project__tech">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">SASS</span>
+                        <span class="tech">JS</span>
+                        <span class="tech">Chart.js</span>
+                    </div>
+                    <h3 class="project__name">Investment Calculator</h3>
+                    <p class="project__description"> Calculate future investment value based on input data. Uses Chart.js library to display the investments value overtime.</p>
+                    <div class="project__links">
+                        <a class="project-live" href="https://youthful-euclid-784d05.netlify.app/" target="_blank">Visit Site</a>
+                        <a class="project-repo" href="https://github.com/bradmeyn/compound_interest_calculator" target="_blank">View Repo<i class="fas fa-angle-right"></i></a>
+                    </div>  
+                </div>  
+            </div>
+            <div class="project" data-aos="fade-up" data-aos-duration="1000">
+                <div class="project__img" id="two">
+                    
+                    <img src="images/Currency_Calc_image.png" alt="">
                 </div>
                 <div class="project__content">
                     <div class="project__tech">
                         <span class="tech">HTML</span>
                         <span class="tech">CSS</span>
                         <span class="tech">JS</span>
-                        <span class="tech">NODE</span>
+                        <span class="tech">API</span>
                     </div>
-                    <h3 class="project__name">Project</h3>
-                    <p class="project__description"> laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
+                    <h3 class="project__name">Currency Converter</h3>
+                    <p class="project__description"> Select a pair of currencies and input amounts to receive the exchange rate using an external currency API. </p>
                     <div class="project__links">
-                        <a class="project-live" href="">Visit Site</a>
-                        <a class="project-repo" href="">View Repo<i class="fas fa-angle-right"></i></a>
+                        <a class="project-live" href="https://eager-poitras-2ed70d.netlify.app/" target="_blank">Visit Site</a>
+                        <a class="project-repo" href="https://github.com/bradmeyn/currency_converter" target="_blank">View Repo<i class="fas fa-angle-right"></i></a>
                         
                     </div>  
                 </div>  
             </div>
             <div class="project" data-aos="fade-up" data-aos-duration="1000">
-                <div class="project__img">
-                    content
-                    <!-- <img src="https://cms-assets.tutsplus.com/uploads/users/2660/posts/35190/image/zimed-app-landing-page-html-template-J33MNVG.jpg" alt=""> -->
-                </div>
-                <div class="project__content">
-                    <div class="project__tech">
-                        <span class="tech">HTML</span>
-                        <span class="tech">CSS</span>
-                        <span class="tech">JS</span>
-                        <span class="tech">NODE</span>
-                    </div>
-                    <h3 class="project__name">Project</h3>
-                    <p class="project__description"> laborum velit corporis molestias praesentium magnam repudiandae dolorem nemo, itaque harum!</p>
-                    <div class="project__links">
-                        <a class="project-live" href="">Visit Site</a>
-                        <a class="project-repo" href="">View Repo<i class="fas fa-angle-right"></i></a>
-                        
-                    </div>  
-                </div>  
-            </div>
-            <div class="project" data-aos="fade-up" data-aos-duration="1000">
-                <div class="project__img">
+                <div class="project__img" id="three">
                     <!-- <img src="https://cms-assets.tutsplus.com/uploads/users/2660/posts/35190/image/zimed-app-landing-page-html-template-J33MNVG.jpg" alt=""> -->
                 </div>
                 <div class="project__content">
@@ -202,10 +203,10 @@
 
         <div class="contact__content content-container">
             <h3 class="contact__heading" data-aos="fade-up" data-aos-duration="1000">Contact Me</h3>
-            <p class="contact__text" data-aos="fade-up" data-aos-duration="1000"> I am currently seeking a entry-level developer job to start my career. If you have a role I would be suitable for or you would like more information please email contact me using <a class="contact__text--email" href="#"> bradjmeyn@gmail.com</a></p>
-            <button  class="contact__btn" data-aos="zoom-in" data-aos-duration="1000"><i class="fas fa-paper-plane"></i>Email</button>
+            <p class="contact__text" data-aos="fade-up" data-aos-duration="1000"> I am currently seeking a entry-level developer job to start my career. If you have a role I would be suitable for or you would like more information please email contact using the button below.</p>
+            <a href="mailto:bradjmeyn@gmail.com"><button  class="contact__btn" data-aos="zoom-in" data-aos-duration="1000"><i class="fas fa-paper-plane"></i>Email</button></a>
             <nav class="link__navbar" data-aos="zoom-in" data-aos-duration="1000">
-                <a href="#" class="link">
+                <a href="https://github.com/bradmeyn" target="_blank" class="link">
                     <span class="link__icon"><i class="fab fa-github"></i>
                         <div class="link__name">Github</div>
                     </span>
@@ -215,7 +216,7 @@
                     <div class="link__name">Resume</div>
                     </span>
                 </a>
-                <a class="link">
+                <a class="link" href="https://www.instagram.com/bradjmeyn" target="_blank">
                     <span class="link__icon"><i class="fab fa-instagram"></i>
                     <div class="link__name">Instagram</div>
                     </span>
@@ -236,11 +237,25 @@
 
 </div>
 
+<canvas class="background"></canvas>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/particles.min.js"></script>
   <script>
     AOS.init({
         once: true
     });
+
+    window.
+onload
+= function() {
+  Particles.
+init
+({
+    selector: 
+'.background'
+  });
+};
   </script>
 <script src="js/main.js"></script>
 </body>

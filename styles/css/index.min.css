@@ -1,12 +1,14 @@
 :root {
   /* Colours */
   --white: #ffffff;
-  --background-dark:#120b1f;
-  --background-light: #F5F5F8;
+  --background-dark: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 23C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   --text-dark: rgb(121, 127, 148);
   --text-darker: rgb(76, 87, 121);
   --text-darkest:rgb(23, 31, 58);
-  --text-light:#8F95B5;
+  --text-light:#ffffffe0;
   --text-lightest: #ffffff;
   --primary: #1A2040;
   --secondary: #ff5d4b;
@@ -30,6 +32,14 @@
   --hs-md: 2.5rem;
   --hs-lg: 3.5rem;
   --hs-xl: 6rem;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 @keyframes fadeIn {
@@ -91,7 +101,6 @@ body.blurry .content {
 }
 
 .header__logo {
-  font-family: "consolas";
   font-size: 3rem;
   display: flex;
   align-items: center;
@@ -212,12 +221,12 @@ body.blurry .content {
   width: 100%;
 }
 
-.navbar ul li {
+.navbar__link-container {
   width: 100%;
   text-align: center;
 }
 
-.navbar ul li a {
+.navbar__link-container a {
   color: var(--text-light);
   font-size: 3rem;
   align-items: center;
@@ -231,7 +240,7 @@ body.blurry .content {
   position: relative;
 }
 
-.navbar ul li a:after {
+.navbar__link-container a:after {
   position: absolute;
   bottom: 1rem;
   left: 0;
@@ -245,17 +254,17 @@ body.blurry .content {
   transition: all .5s;
 }
 
-.navbar ul li a:hover {
+.navbar__link-container a:hover {
   color: var(--text-lightest);
 }
 
-.navbar ul li a:hover:after {
+.navbar__link-container a:hover:after {
   width: 60%;
 }
 
 .landing {
   position: relative;
-  background-image: linear-gradient(rgba(24, 37, 56, 0.6), rgba(24, 37, 56, 0.6)), url(/images/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg);
+  background-image: linear-gradient(rgba(38, 59, 90, 0.6), rgba(43, 65, 99, 0.6)), url(/images/pexels-abdullah-ghatasheh-1631677.jpg);
   background-size: cover;
   background-position: top;
   padding: var(--mobile-padding);
@@ -298,9 +307,13 @@ body.blurry .content {
   animation-delay: 1s;
 }
 
+.landing a {
+  text-decoration: none;
+}
+
 .landing .btn {
-  display: block;
-  padding: 1rem 2rem;
+  display: inline-block;
+  padding: 1rem 2.4rem;
   border-radius: 50px;
   text-decoration: none;
   cursor: pointer;
@@ -324,10 +337,12 @@ body.blurry .content {
 .landing .btn:hover, .landing .btn:focus {
   background-color: var(--secondary-light);
   border: solid 2px var(--secondary-light);
+  transform: scale(1.1);
 }
 
 .about {
   background-color: var(--primary);
+  background-image: var(--background-dark);
   font-weight: 300;
   padding: var(--mobile-padding);
 }
@@ -341,6 +356,7 @@ body.blurry .content {
 .about__text {
   color: var(--text-light);
   min-width: 35rem;
+  margin-bottom: var(--margin-lg);
 }
 
 .about__heading {
@@ -362,18 +378,19 @@ body.blurry .content {
 
 .about__paragraph {
   font-size: var(--fs-md);
-  line-height: 1.5;
+  line-height: 1.3;
   margin-bottom: 2rem;
 }
 
 .about .card {
   padding: 2rem 3rem;
-  background-image: linear-gradient(45deg, #69417c 0%, #687c99 100%);
-  background-image: linear-gradient(-225deg, #4d5a81 0%, #4f3350 100%);
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   margin: 0 auto;
   min-width: 37rem;
-  height: 40rem;
+  height: 37rem;
 }
 
 .about .card__profile {
@@ -381,7 +398,7 @@ body.blurry .content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--margin-md);
+  margin-bottom: var(--margin-sm);
 }
 
 .about .card__img {
@@ -391,6 +408,7 @@ body.blurry .content {
   object-fit: contain;
   width: 12rem;
   height: 12rem;
+  margin-bottom: var(--margin-md);
 }
 
 .about .card__img img {
@@ -401,8 +419,8 @@ body.blurry .content {
 
 .about .card__content {
   display: block;
-  height: 11rem;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
+  margin-bottom: var(--margin-sm);
 }
 
 .about .card__heading {
@@ -431,10 +449,11 @@ body.blurry .content {
 
 .about .card__skills {
   flex: 1;
+  margin: 0 auto;
 }
 
 .about .card__skills .skills-heading {
-  font-size: var(--hs-sm);
+  font-size: var(--fs-md);
   margin-bottom: var(--margin-md);
   color: var(--text-lightest);
 }
@@ -446,7 +465,7 @@ body.blurry .content {
 .about .card__skills .skill-list {
   color: var(--text-light);
   width: 50%;
-  margin-left: 4rem;
+  margin-left: 5rem;
   list-style: none;
   font-size: var(--fs-sm);
 }
@@ -468,7 +487,7 @@ body.blurry .content {
 
 .projects {
   padding: var(--mobile-padding);
-  background-color: var(--background-light);
+  background-image: var(--background-light);
   width: 100%;
 }
 
@@ -494,7 +513,7 @@ body.blurry .content {
 .projects__text {
   font-size: var(--fs-md);
   color: var(--text-darker);
-  line-height: 1.5;
+  line-height: 1.3;
   text-align: center;
 }
 
@@ -515,6 +534,18 @@ body.blurry .content {
   border-radius: 15px;
 }
 
+.project #one {
+  background-image: linear-gradient(to bottom, #accbee 0%, #e7f0fd 100%);
+}
+
+.project #two {
+  background-image: linear-gradient(to bottom, #feada6 0%, #f5efef 100%);
+}
+
+.project #three {
+  background-image: linear-gradient(to bottom, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+}
+
 .project__img {
   height: 20rem;
   display: flex;
@@ -522,20 +553,20 @@ body.blurry .content {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%);
 }
 
 .project__img img {
   position: relative;
-  width: 60%;
+  width: 70%;
   object-fit: contain;
   object-position: left;
   transition: all .6s ease;
-  border-radius: 12;
+  opacity: 0.6;
 }
 
 .project__img:hover img {
-  width: 70%;
+  width: 80%;
+  opacity: 0.8;
 }
 
 .project__tech {
@@ -611,13 +642,13 @@ body.blurry .content {
 
 .contact {
   padding: var(--mobile-padding);
-  background: var(--primary);
+  background-image: var(--background-dark);
   text-align: center;
 }
 
 .contact__content {
   margin: 0 auto;
-  max-width: 50rem;
+  max-width: 55rem;
 }
 
 .contact__heading {
@@ -631,7 +662,7 @@ body.blurry .content {
 .contact__text {
   color: var(--text-light);
   font-size: var(--fs-md);
-  line-height: 1.5;
+  line-height: 1.3;
   padding-bottom: var(--margin-xl);
 }
 
@@ -649,6 +680,7 @@ body.blurry .content {
 }
 
 .contact__btn {
+  display: inline-block;
   padding: 1rem .5rem;
   border-radius: 50px;
   text-decoration: none;
@@ -674,7 +706,7 @@ body.blurry .content {
 }
 
 .link {
-  font-size: 3rem;
+  font-size: var(--fs-xl);
   cursor: pointer;
   text-decoration: none;
   color: var(--text-lightest);
@@ -716,12 +748,12 @@ body.blurry .content {
 .footer {
   text-align: center;
   padding: 4rem;
-  background-color: #0d131f;
+  background-color: #537895;
 }
 
 .footer__copyright {
   color: var(--text-light);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   width: 100%;
   text-align: center;
 }
@@ -837,7 +869,7 @@ body.blurry .content {
   }
   .about__text {
     flex: 1;
-    padding-right: 5rem;
+    padding-right: 4rem;
     min-width: 45rem;
   }
   .about .card {
