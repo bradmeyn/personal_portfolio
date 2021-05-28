@@ -83,6 +83,7 @@ body {
 body.blurry .content {
   filter: blur(5px) brightness(0.6);
   overflow-y: hidden;
+  z-index: 10;
 }
 
 .header {
@@ -274,6 +275,7 @@ body.blurry .content {
 .landing__content {
   position: relative;
   top: 45%;
+  z-index: 1;
   transform: translateY(-50%);
 }
 
@@ -544,6 +546,10 @@ body.blurry .content {
 
 .project #three {
   background-image: linear-gradient(to bottom, #bdc2e8 0%, #e6dee9 100%);
+}
+
+.project #four {
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
 
 .project__img {

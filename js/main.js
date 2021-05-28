@@ -40,17 +40,17 @@ window.onload = function(){
   selector: 
   '.background',
 
-  color: ["#accbee","#feada6", "#f21170"],
+  color: ["#accbee","#feada6", "#bdc2e8", "#fdcbf1", "#fccb90", "#d57eeb", "#f093fb", "#4facfe", "#43e97b", "#6f86d6"],
 
-  type: "circle",
+  speed: .3,
 
   sizeVariatiuons: 10,
 
   connectParticles: true,
 
-  minDistance: 20,
+  minDistance: 50,
 
-  maxParticles: 100,
+  maxParticles: 200,
   
 
     });
