@@ -34,22 +34,26 @@ AOS.init({
   once: true
 });
 
-window.
-onload = function(){
+window.onload = function(){
   Particles.init({
   
   selector: 
   '.background',
 
-  color: "#ff5d4b",
+  color: ["#accbee","#feada6", "#f21170"],
 
-  maxParticles: 
-450
-,
+  type: "circle",
+
+  sizeVariatiuons: 10,
+
+  connectParticles: true,
+
+  minDistance: 20,
+
+  maxParticles: 100,
   
-    
 
-  });
+    });
   };
 
 

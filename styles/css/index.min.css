@@ -1,7 +1,7 @@
 :root {
   /* Colours */
   --white: #ffffff;
-  --background-dark: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+  --background-dark: linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 23C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -10,7 +10,7 @@
   --text-darkest:rgb(23, 31, 58);
   --text-light:#ffffffe0;
   --text-lightest: #ffffff;
-  --primary: #1A2040;
+  --primary: #1a2940;
   --secondary: #ff5d4b;
   --secondary-light: #fd7061;
   --section-padding: 5rem 10rem;
@@ -264,9 +264,9 @@ body.blurry .content {
 
 .landing {
   position: relative;
-  background-image: linear-gradient(rgba(38, 59, 90, 0.6), rgba(43, 65, 99, 0.6)), url(/images/pexels-abdullah-ghatasheh-1631677.jpg);
   background-size: cover;
   background-position: top;
+  background-color: var(--primary);
   padding: var(--mobile-padding);
   height: 100vh;
 }
@@ -543,7 +543,7 @@ body.blurry .content {
 }
 
 .project #three {
-  background-image: linear-gradient(to bottom, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+  background-image: linear-gradient(to bottom, #bdc2e8 0%, #e6dee9 100%);
 }
 
 .project__img {
