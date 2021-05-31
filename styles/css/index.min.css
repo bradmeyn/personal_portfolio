@@ -15,7 +15,7 @@
   --secondary-light: #fd7061;
   --section-padding: 5rem 10rem;
   --mobile-padding:  5rem 4rem;
-  --font-body: 'Roboto', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   --margin-sm: .5rem;
   --margin-md: 1rem;
@@ -31,7 +31,7 @@
   --hs-sm: 2rem;
   --hs-md: 2.5rem;
   --hs-lg: 3.5rem;
-  --hs-xl: 6rem;
+  --hs-xl: 6.6rem;
 }
 
 .background {
@@ -83,7 +83,7 @@ body {
 body.blurry .content {
   filter: blur(5px) brightness(0.6);
   overflow-y: hidden;
-  z-index: 10;
+  z-index: 30;
 }
 
 .header {
@@ -127,18 +127,6 @@ body.blurry .content {
   height: 3rem;
   width: 2.8rem;
   padding: 2rem;
-}
-
-.hamburger__box:hover .hamburger__line, .hamburger__box:hover .hamburger__line::before, .hamburger__box:hover .hamburger__line::after {
-  background-color: var(--secondary);
-}
-
-.hamburger__box:hover .hamburger__line:before {
-  transform: translate(-80%, 0);
-}
-
-.hamburger__box:hover .hamburger__line:after {
-  transform: translate(-80%, 0);
 }
 
 .hamburger__line, .hamburger__line::before, .hamburger__line::after {
@@ -198,7 +186,7 @@ body.blurry .content {
 .content {
   height: 100%;
   width: 100%;
-  z-index: 4;
+  z-index: 10;
 }
 
 .navbar {
@@ -253,14 +241,6 @@ body.blurry .content {
   color: var(--white);
   height: 2px;
   transition: all .5s;
-}
-
-.navbar__link-container a:hover {
-  color: var(--text-lightest);
-}
-
-.navbar__link-container a:hover:after {
-  width: 60%;
 }
 
 .landing {
@@ -880,6 +860,35 @@ body.blurry .content {
   }
   .about .card {
     margin: 0 autp;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--text-lightest);
+  }
+  a:hover:after {
+    width: 60%;
+  }
+  .hamburger__box:hover .hamburger__line, .hamburger__box:hover .hamburger__line::before, .hamburger__box:hover .hamburger__line::after {
+    background-color: var(--secondary);
+  }
+  .hamburger__box:hover .hamburger__line:before {
+    transform: translate(-80%, 0);
+  }
+  .hamburger__box:hover .hamburger__line:after {
+    transform: translate(-80%, 0);
+  }
+  .active .hamburger__box:hover .hamburger__line, .active .hamburger__box:hover .hamburger__line::before, .active .hamburger__box:hover .hamburger__line::after {
+    background: rgba(0, 0, 0, 0);
+  }
+  .active .hamburger__box:hover .hamburger__line:before {
+    transform: rotate(45deg);
+    background-color: var(--secondary);
+  }
+  .active .hamburger__box:hover .hamburger__line:after {
+    transform: rotate(135deg);
+    background-color: var(--secondary);
   }
 }
 /*# sourceMappingURL=index.min.css.map */

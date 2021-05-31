@@ -7,11 +7,23 @@
 let ham = document.querySelector(".hamburger");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
+
+
   
   ham.addEventListener("click", () => {
 ham.classList.toggle("active");
   body.classList.toggle("blurry");
 });
+
+//
+
+window.addEventListener("resize", () => {
+  if(window.innerWidth > 760){
+    ham.classList.remove("active");
+      body.classList.remove("blurry");
+  }
+});
+
 
 content.addEventListener("click", ()=> {
     ham.classList.remove("active");
@@ -30,10 +42,15 @@ links.forEach((link) => {
   });
 });
 
+
+//appear on scroll
 AOS.init({
   once: true
 });
 
+
+
+//particle js
 window.onload = function(){
   Particles.init({
   
@@ -51,6 +68,15 @@ window.onload = function(){
   minDistance: 50,
 
   maxParticles: 200,
+
+  responsive: [{
+
+    breakpoint: 760,
+    options : {
+      maxParticles: 100
+    }
+  }
+  ]
   
 
     });
