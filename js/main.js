@@ -26,6 +26,7 @@ window.addEventListener("resize", () => {
 
 
 content.addEventListener("click", ()=> {
+  
     ham.classList.remove("active");
     body.classList.remove("blurry");
 });
@@ -51,11 +52,10 @@ AOS.init({
 
 
 //particle js
-window.onload = function(){
+window.onload = () => {
   Particles.init({
   
-  selector: 
-  '.background',
+  selector: '.particle',
 
   color: ["#accbee","#feada6", "#bdc2e8", "#fdcbf1", "#fccb90", "#d57eeb", "#f093fb", "#4facfe", "#43e97b", "#6f86d6"],
 
