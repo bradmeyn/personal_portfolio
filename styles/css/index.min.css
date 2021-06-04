@@ -1,12 +1,12 @@
 :root {
   /* Colours */
   --white: #ffffff;
-  --background-dark:  linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
+  --background-dark: linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
   --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   --text-dark: rgb(121, 127, 148);
   --text-darker: rgb(76, 87, 121);
-  --text-darkest:rgb(23, 31, 58);
-  --text-light:#ffffffe0;
+  --text-darkest: rgb(23, 31, 58);
+  --text-light: #ffffffe0;
   --text-lightest: #ffffff;
   --primary-light: #d4e3fa;
   --primary: #1a2940;
@@ -14,10 +14,10 @@
   --secondary: #ff5d4b;
   --secondary-light: #fd7061;
   --section-padding: 5rem 10rem;
-  --mobile-padding:  5rem 4rem;
-  --font-body: 'DM Sans', sans-serif;
+  --mobile-padding: 5rem 4rem;
+  --font-body: "DM Sans", sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  --margin-sm: .5rem;
+  --margin-sm: 0.5rem;
   --margin-md: 1rem;
   --margin-lg: 2rem;
   --margin-xl: 4rem;
@@ -182,7 +182,7 @@ body.blurry .content {
 
 .hamburger.active ~ .navbar {
   transform: translateX(0);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .hamburger.active ~ .header__logo {
@@ -208,7 +208,7 @@ body.blurry .content {
   right: 0;
   width: 35rem;
   height: 100%;
-  background-color: #0A192F;
+  background-image: var(--background-dark);
   transform: translateX(50rem);
 }
 
@@ -243,11 +243,11 @@ body.blurry .content {
   right: 0;
   margin: auto;
   width: 0%;
-  content: '';
+  content: "";
   background: var(--secondary);
   color: var(--white);
   height: 2px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .landing {
@@ -267,7 +267,7 @@ body.blurry .content {
 }
 
 .landing__heading--intro {
-  animation: fadeIn .75s;
+  animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
   font-size: var(--fs-lg);
@@ -276,10 +276,10 @@ body.blurry .content {
 }
 
 .landing__heading--name {
-  animation: fadeIn .75s;
+  animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   font-size: var(--hs-xl);
   display: block;
   margin-bottom: var(--margin-sm);
@@ -307,13 +307,13 @@ body.blurry .content {
   text-decoration: none;
   cursor: pointer;
   margin-bottom: var(--margin-xl);
-  transition: all .3s linear;
+  transition: all 0.3s linear;
   background-color: var(--secondary);
   color: #ffffff;
   border: solid 2px var(--secondary);
   font-family: var(--font-body);
   font-size: var(--hs-sm);
-  animation: fadeIn .75s;
+  animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 1.5s;
@@ -574,7 +574,7 @@ body.blurry .content {
   width: 60%;
   object-fit: contain;
   object-position: left;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
   opacity: 0.6;
 }
 
@@ -592,8 +592,8 @@ body.blurry .content {
   background-color: var(--primary-light);
   color: var(--text-darker);
   border-radius: 15px;
-  padding: .25rem .5rem;
-  margin-right: .25rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .project__content {
@@ -603,7 +603,7 @@ body.blurry .content {
 .project__content h3 {
   font-size: var(--hs-md);
   margin-bottom: var(--margin-md);
-  color: #12003B;
+  color: #12003b;
 }
 
 .project__content p {
@@ -623,8 +623,8 @@ body.blurry .content {
   color: #ffffff;
   border-radius: 15px;
   margin-right: 2rem;
-  padding: .2rem 1rem;
-  transition: all .3s ease;
+  padding: 0.2rem 1rem;
+  transition: all 0.3s ease;
 }
 
 .project__links .project-repo {
@@ -635,8 +635,8 @@ body.blurry .content {
 }
 
 .project__links .project-repo i {
-  transition: transform .2s linear;
-  margin-left: .5rem;
+  transition: transform 0.2s linear;
+  margin-left: 0.5rem;
 }
 
 .project--tutorial {
@@ -679,7 +679,7 @@ body.blurry .content {
 .contact__text--email {
   display: block;
   font-size: var(--fs-md);
-  transition: all linear .5s;
+  transition: all linear 0.5s;
   text-decoration: none;
   color: var(--secondary);
 }
@@ -691,13 +691,13 @@ body.blurry .content {
 
 .contact__btn {
   display: inline-block;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   border-radius: 50px;
   text-decoration: none;
   cursor: pointer;
   width: 15rem;
   margin: 0 auto var(--margin-xl);
-  transition: all .3s linear;
+  transition: all 0.3s linear;
   background-color: var(--secondary);
   color: var(--white);
   border: solid 2px var(--secondary);
@@ -733,7 +733,7 @@ body.blurry .content {
 
 .icon-navbar .link__name {
   opacity: 0;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: var(--fs-sm);
   font-weight: 500;
@@ -799,12 +799,16 @@ body.blurry .content {
     right: 0;
     padding: 0;
     background-color: transparent;
+    background-image: none;
     transform: translateX(0rem);
     transition: none;
   }
   .navbar__links {
     display: flex;
     height: 100%;
+  }
+  .navbar__links ul {
+    top: 0;
   }
   .navbar__links li {
     position: relative;
@@ -838,11 +842,11 @@ body.blurry .content {
     right: 0;
     margin: auto;
     width: 0%;
-    content: '.';
+    content: ".";
     background: var(--secondary);
     color: transparent;
     height: 2px;
-    transition: all .5s;
+    transition: all 0.5s;
   }
   .navbar__links li a:hover {
     color: var(--text-lightest);
@@ -872,12 +876,6 @@ body.blurry .content {
   }
   .about .card {
     margin: 0 autp;
-  }
-  .projects__subheading {
-    text-align: left;
-  }
-  .projects__text--tutorial {
-    text-align: left;
   }
   .project {
     margin-bottom: --margin-xl;
@@ -928,13 +926,13 @@ body.blurry .content {
     transform: scale(1.1);
   }
   .icon-navbar .link:hover .link__name, .icon-navbar .link:focus {
-    transition: all ease .5s;
+    transition: all ease 0.5s;
     transform: translateY(10px);
     opacity: 1;
   }
   .icon-navbar .link:hover .link__icon, .icon-navbar .link:focus {
     transform: scale(1.1);
-    transition: all ease .5s;
+    transition: all ease 0.5s;
     color: var(--secondary);
   }
 }

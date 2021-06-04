@@ -1,0 +1,26 @@
+{
+  "name": "personal_portfolio",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradmeyn/personal_portfolio.git"
+  },
+  "author": "Brad Meyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradmeyn/personal_portfolio/issues"
+  },
+  "homepage": "https://github.com/bradmeyn/personal_portfolio#readme",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "particlesjs": "^2.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0"
+  }
+}
