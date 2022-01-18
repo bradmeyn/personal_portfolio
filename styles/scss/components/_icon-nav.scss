@@ -1,0 +1,27 @@
+.icon-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .link {
+    font-size: var(--fs-xl);
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-lightest);
+    text-align: center;
+    width: 10rem;
+
+    &__name {
+      opacity: 0;
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      transform: translateY(-25px);
+      color: var(--text-lightest);
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}

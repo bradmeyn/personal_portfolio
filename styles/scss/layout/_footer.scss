@@ -1,0 +1,12 @@
+.footer {
+  text-align: center;
+  padding: 4rem;
+  background-color: var(--primary-dark);
+
+  &__copyright {
+    color: var(--primary-light);
+    font-size: var(--fs-xs);
+    width: 100%;
+    text-align: center;
+  }
+}

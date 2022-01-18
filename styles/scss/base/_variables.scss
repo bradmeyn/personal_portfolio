@@ -1,0 +1,58 @@
+:root {
+  /* Colours */
+
+  --white: #ffffff;
+
+  --background-dark: linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
+
+  --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+  // colors for light backgrounds
+  --text-dark: rgb(121, 127, 148);
+  --text-darker: rgb(76, 87, 121);
+  --text-darkest: rgb(23, 31, 58);
+
+  //colors for dark backgrounds
+  --text-light: #ffffffe0;
+  // --text-lighter: #3e5872 ;
+  --text-lightest: #ffffff;
+
+  --primary-light: #d4e3fa;
+  --primary: #1a2940;
+  --primary-dark: #111b2b;
+
+  --secondary: #ff5d4b;
+  --secondary-light: #fd7061;
+
+  --section-padding: 5rem 10rem;
+  --mobile-padding: 5rem 4rem;
+
+  --font-body: "DM Sans", sans-serif;
+  --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+
+  //margins
+  --margin-sm: 0.5rem;
+  --margin-md: 1rem;
+  --margin-lg: 2rem;
+  --margin-xl: 4rem;
+
+  //font sizes
+  --fs--xxs: 1rem;
+  --fs-xs: 1.4rem;
+  --fs-sm: 1.6rem;
+  --fs-md: 1.8rem;
+  --fs-lg: 2.2rem;
+  --fs-xl: 3rem;
+
+  //heading sizes
+  --hs-vs: 1.5rem;
+  --hs-sm: 2rem;
+  --hs-md: 2.5rem;
+  --hs-lg: 3.5rem;
+  --hs-xl: 6.2rem;
+}
+
+//screen sizes
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;

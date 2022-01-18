@@ -1,0 +1,81 @@
+.landing {
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  background-color: var(--primary);
+  padding: var(--mobile-padding);
+  height: 100vh;
+
+  &__content {
+    position: relative;
+    top: 45%;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+
+  &__heading {
+    &--intro {
+      animation: fadeIn 0.75s;
+      opacity: 0;
+      animation-fill-mode: both;
+      font-size: var(--fs-lg);
+      color: var(--text-light);
+      margin-bottom: var(--margin-lg);
+    }
+
+    &--name {
+      animation: fadeIn 0.75s;
+      opacity: 0;
+      animation-fill-mode: both;
+      animation-delay: 0.5s;
+      font-size: var(--hs-xl);
+      display: block;
+      margin-bottom: var(--margin-sm);
+      color: var(--text-lightest);
+    }
+  }
+
+  &__subheading {
+    font-size: var(--hs-lg);
+    color: var(--text-light);
+    margin-bottom: var(--margin-xl);
+    animation: fadeInRight 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: var(--margin-xl);
+    transition: all 0.3s linear;
+    background-color: var(--secondary);
+    color: #ffffff;
+    border: solid 2px var(--secondary);
+    font-family: var(--font-body);
+    font-size: var(--hs-sm);
+    animation: fadeIn 0.75s;
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-delay: 1.5s;
+
+    i {
+      margin-right: 1.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-light);
+      border: solid 2px var(--secondary-light);
+      transform: scale(1.1);
+    }
+  }
+}

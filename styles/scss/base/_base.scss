@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+
+  &.blurry .content {
+    filter: blur(5px) brightness(0.6);
+    overflow-y: hidden;
+    display: block;
+  }
+}
+
+.particle {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
