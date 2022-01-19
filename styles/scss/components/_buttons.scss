@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 50px;
+  background-color: var(--secondary);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 1.8rem;
+  font-family: var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-light);
+  }
+}
+
+.btn--landing {
+  @extend .btn;
+  display: inline-block;
+  position: relative;
+  font-size: var(--hs-sm);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.75s;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  margin: 0;
+
+  i {
+    position: relative;
+    margin-left: 3px;
+    transition: all 0.2s ease-in-out;
+    font-size: var(--fs-sm);
+  }
+
+  &:hover,
+  &:focus {
+    i {
+      transform: translatex(3px);
+    }
+  }
+}

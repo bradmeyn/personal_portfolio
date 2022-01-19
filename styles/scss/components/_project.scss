@@ -121,3 +121,23 @@
     max-width: 38rem;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .project-repo {
+    &:hover {
+      color: var(--secondary-light);
+      text-decoration: underline;
+
+      i {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  .project-live {
+    &:hover {
+      background-color: var(--secondary-light);
+      border: solid 2px var(--secondary-light);
+    }
+  }
+}

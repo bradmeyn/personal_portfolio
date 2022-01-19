@@ -3,6 +3,7 @@
 @import "base/animations";
 @import "base/base";
 @import "base/variables";
+@import "base/utilities";
 
 //components
 
@@ -10,6 +11,7 @@
 @import "components/navbar";
 @import "components/project";
 @import "components/icon-nav";
+@import "components/buttons";
 
 //layout
 
@@ -19,17 +21,6 @@
 @import "layout/landing";
 @import "layout/projects";
 @import "layout/footer";
-
-.content-container {
-  margin: 0 auto;
-  max-width: 100rem;
-}
-
-.content {
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
 
 //Aboutsection ---------------------------------------------------------------------------------
 
@@ -245,25 +236,6 @@
         transform: rotate(135deg);
         background-color: var(--secondary);
       }
-    }
-  }
-
-  .project-repo {
-    &:hover {
-      color: var(--secondary-light);
-      text-decoration: underline;
-
-      i {
-        transform: translateX(4px);
-      }
-    }
-  }
-
-  .project-live {
-    &:hover {
-      background-color: var(--secondary-light);
-      border: solid 2px var(--secondary-light);
-      transform: scale(1.1);
     }
   }
 

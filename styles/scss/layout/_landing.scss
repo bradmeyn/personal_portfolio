@@ -8,9 +8,8 @@
 
   &__content {
     position: relative;
-    top: 45%;
+    top: 20rem;
     z-index: 1;
-    transform: translateY(-50%);
   }
 
   &__heading {
@@ -48,34 +47,7 @@
   a {
     text-decoration: none;
   }
+}
 
-  .btn {
-    display: inline-block;
-    padding: 1rem 2.4rem;
-    border-radius: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    margin-bottom: var(--margin-xl);
-    transition: all 0.3s linear;
-    background-color: var(--secondary);
-    color: #ffffff;
-    border: solid 2px var(--secondary);
-    font-family: var(--font-body);
-    font-size: var(--hs-sm);
-    animation: fadeIn 0.75s;
-    opacity: 0;
-    animation-fill-mode: both;
-    animation-delay: 1.5s;
-
-    i {
-      margin-right: 1.5rem;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: var(--secondary-light);
-      border: solid 2px var(--secondary-light);
-      transform: scale(1.1);
-    }
-  }
+@media only screen and (min-width: $screen-md) {
 }

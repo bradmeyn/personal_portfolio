@@ -4,7 +4,6 @@
   --white: #ffffff;
 
   --background-dark: linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
-
   --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
   // colors for light backgrounds
@@ -24,8 +23,8 @@
   --secondary: #ff5d4b;
   --secondary-light: #fd7061;
 
-  --section-padding: 5rem 10rem;
-  --mobile-padding: 5rem 4rem;
+  --padding-desktop: 5rem 10rem;
+  --padding-mobile: 5rem 4rem;
 
   --font-body: "DM Sans", sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
@@ -49,7 +48,7 @@
   --hs-sm: 2rem;
   --hs-md: 2.5rem;
   --hs-lg: 3.5rem;
-  --hs-xl: 6.2rem;
+  --hs-xl: 7rem;
 }
 
 //screen sizes

@@ -4,7 +4,6 @@
   padding: 0 4rem;
   position: absolute;
   background-color: transparent;
-  z-index: 2;
   width: 100%;
   height: 8rem;
   max-width: 108rem;
@@ -12,13 +11,27 @@
   align-items: center;
   justify-content: space-between;
   z-index: 2;
-  transition: top 1s ease;
 
   &__logo {
+    font-family: var(--font-body);
+    font-weight: 800;
     font-size: 3rem;
     display: flex;
     align-items: center;
     color: var(--secondary);
     order: -1;
+  }
+}
+
+@media only screen and (min-width: $screen-md) {
+  .header {
+    align-items: center;
+    transition: none;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .hamburger {
+      display: none;
+    }
   }
 }
