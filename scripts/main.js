@@ -27,7 +27,7 @@ content.addEventListener("click", () => {
   body.classList.remove("blurry");
 });
 
-const links = document.querySelectorAll(".navbar__link-container");
+const links = document.querySelectorAll(".nav__item");
 
 links.forEach((link) => {
   link.addEventListener("click", () => {

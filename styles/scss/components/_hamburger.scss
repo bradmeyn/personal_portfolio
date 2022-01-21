@@ -66,7 +66,7 @@
     background-color: var(--secondary);
   }
 
-  &.active ~ .navbar {
+  &.active ~ .nav {
     transform: translateX(0);
     transition: all 0.5s;
   }
@@ -74,5 +74,11 @@
   &.active ~ .header__logo {
     filter: blur(5px) brightness(0.6);
     overflow-y: hidden;
+  }
+}
+
+@media only screen and (min-width: $screen-md) {
+  .hamburger {
+    display: none;
   }
 }
