@@ -1,3 +1,40 @@
+:root {
+  /* Colours */
+  --white: #ffffff;
+  --background-dark: linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
+  --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  --text-dark: rgb(121, 127, 148);
+  --text-darker: rgb(76, 87, 121);
+  --text-darkest: rgb(23, 31, 58);
+  --text-light: #b7c7d8;
+  --text-lighter: #f0f6fc;
+  --text-lightest: #ffffff;
+  --primary-light: #d4e3fa;
+  --primary: #1a2940;
+  --primary-dark: #111b2b;
+  --secondary: #ff5d4bdc;
+  --secondary-light: #fd7061;
+  --padding-desktop: 5rem 10rem;
+  --padding-mobile: 5rem 4rem;
+  --font-body: "DM Sans", sans-serif;
+  --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  --margin-sm: 0.5rem;
+  --margin-md: 1rem;
+  --margin-lg: 2rem;
+  --margin-xl: 4rem;
+  --fs--xxs: 1rem;
+  --fs-xs: 1.4rem;
+  --fs-sm: 1.6rem;
+  --fs-md: 1.8rem;
+  --fs-lg: 2.2rem;
+  --fs-xl: 3rem;
+  --hs-xs: 1.5rem;
+  --hs-sm: 2rem;
+  --hs-md: 2.5rem;
+  --hs-lg: 3.5rem;
+  --hs-xl: 7rem;
+}
+
 @keyframes fadeIn {
   from {
     transform: translateY(30px);
@@ -60,41 +97,10 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  /* Colours */
-  --white: #ffffff;
-  --background-dark: linear-gradient(to bottom, #1a2940 0%, #33445e 100%);
-  --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  --text-dark: rgb(121, 127, 148);
-  --text-darker: rgb(76, 87, 121);
-  --text-darkest: rgb(23, 31, 58);
-  --text-light: #b7c7d8;
-  --text-lighter: #f0f6fc;
-  --text-lightest: #ffffff;
-  --primary-light: #d4e3fa;
-  --primary: #1a2940;
-  --primary-dark: #111b2b;
-  --secondary: #ff5d4bdc;
-  --secondary-light: #fd7061;
-  --padding-desktop: 5rem 10rem;
-  --padding-mobile: 5rem 4rem;
-  --font-body: "DM Sans", sans-serif;
-  --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  --margin-sm: 0.5rem;
-  --margin-md: 1rem;
-  --margin-lg: 2rem;
-  --margin-xl: 4rem;
-  --fs--xxs: 1rem;
-  --fs-xs: 1.4rem;
-  --fs-sm: 1.6rem;
-  --fs-md: 1.8rem;
-  --fs-lg: 2.2rem;
-  --fs-xl: 3rem;
-  --hs-vs: 1.5rem;
-  --hs-sm: 2rem;
-  --hs-md: 2.5rem;
-  --hs-lg: 3.5rem;
-  --hs-xl: 6rem;
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 70%;
+  }
 }
 
 .container {
@@ -130,7 +136,7 @@ html {
   margin: 0 auto;
   transition: 0.5s;
   width: 3rem;
-  height: 2.2px;
+  height: 2.5px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -650,8 +656,10 @@ html {
   position: absolute;
   content: "";
   width: 5rem;
-  border-bottom: 2px solid var(--secondary-light);
+  border: 2px solid var(--secondary-light);
   top: 5rem;
+  height: 0;
+  border-radius: 0 1000px 1000px 0;
   left: 0;
 }
 
@@ -681,7 +689,7 @@ html {
 
 .about .card__img {
   border-radius: 50%;
-  border: solid 2px var(--secondary-light);
+  border: solid 3px var(--secondary-light);
   overflow: hidden;
   object-fit: contain;
   width: 12rem;
@@ -886,7 +894,7 @@ html {
 
 .landing__content {
   position: relative;
-  top: 10rem;
+  top: 30%;
   z-index: 1;
 }
 
@@ -894,7 +902,7 @@ html {
   animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
-  font-size: var(--fs-lg);
+  font-size: var(--hs-md);
   font-weight: 300;
   color: var(--text-light);
   margin-bottom: var(--margin-lg);
@@ -908,7 +916,14 @@ html {
   font-size: var(--hs-xl);
   display: block;
   margin-bottom: var(--margin-sm);
+  color: var(--secondary-light);
+}
+
+.landing__heading--name::before {
+  position: absolute;
+  content: "Brad Meyn.";
   color: var(--text-lightest);
+  left: 5px;
 }
 
 .landing__subheading {
@@ -942,13 +957,14 @@ html {
 
 .projects__heading::after, .contact__heading::after {
   position: absolute;
-  font-size: 3rem;
   content: "";
   width: 5rem;
-  border-bottom: 2px solid var(--secondary);
+  border: 2px solid var(--secondary-light);
+  top: 5rem;
+  height: 0;
+  border-radius: 1000px;
   left: 50%;
   transform: translateX(-50%);
-  top: 5rem;
 }
 
 .projects__subheading {

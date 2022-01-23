@@ -12,7 +12,8 @@
 
   &__content {
     position: relative;
-    top: 10rem;
+    top: 30%;
+
     z-index: 1;
   }
 
@@ -21,7 +22,7 @@
       animation: fadeIn 0.75s;
       opacity: 0;
       animation-fill-mode: both;
-      font-size: var(--fs-lg);
+      font-size: var(--hs-md);
       font-weight: 300;
       color: var(--text-light);
       margin-bottom: var(--margin-lg);
@@ -35,7 +36,14 @@
       font-size: var(--hs-xl);
       display: block;
       margin-bottom: var(--margin-sm);
-      color: var(--text-lightest);
+      color: var(--secondary-light);
+
+      &::before {
+        position: absolute;
+        content: "Brad Meyn.";
+        color: var(--text-lightest);
+        left: 5px;
+      }
     }
   }
 

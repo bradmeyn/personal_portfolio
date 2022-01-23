@@ -12,13 +12,14 @@
 
     &::after {
       position: absolute;
-      font-size: 3rem;
       content: "";
       width: 5rem;
-      border-bottom: 2px solid var(--secondary);
+      border: 2px solid var(--secondary-light);
+      top: 5rem;
+      height: 0;
+      border-radius: 1000px;
       left: 50%;
       transform: translateX(-50%);
-      top: 5rem;
     }
   }
 

@@ -29,3 +29,9 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
+@media only screen and (min-width: $screen-md) {
+  html {
+    font-size: 70%;
+  }
+}
