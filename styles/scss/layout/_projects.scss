@@ -45,15 +45,4 @@
       margin-bottom: var(--margin-lg);
     }
   }
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    &--tutorial {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
 }

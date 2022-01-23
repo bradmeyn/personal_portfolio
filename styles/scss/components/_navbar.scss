@@ -5,7 +5,7 @@
   align-items: center;
   z-index: 2;
   position: fixed;
-  padding-top: 5rem;
+
   top: 0;
   right: 0;
   width: 35rem;
@@ -15,16 +15,19 @@
 
   &__list {
     list-style: none;
-    width: 100%;
   }
 
   &__item {
     width: 100%;
     text-align: center;
+
+    &--icon {
+      display: none;
+    }
   }
 
   &__link {
-    color: var(--text-light);
+    color: var(--text-lighter);
     font-size: 3rem;
     align-items: center;
     display: flex;
@@ -35,6 +38,7 @@
     text-decoration: none;
     cursor: pointer;
     position: relative;
+    transition: all 0.4s ease-in-out;
 
     &:after {
       position: absolute;
@@ -46,55 +50,86 @@
       content: "";
       background: var(--secondary);
       color: var(--white);
-      height: 2px;
+      height: 5px;
+      border-radius: 1000px;
       transition: all 0.5s;
     }
   }
 }
 
+//tablet and bigger
 @media only screen and (min-width: $screen-md) {
-  .content {
-    height: 100%;
-    width: 100%;
-    z-index: 4;
-  }
+  // .content {
+  //   height: 100%;
+  //   width: 100%;
+  //   z-index: 4;
+  // }
 
   .nav {
     opacity: 1;
-    position: relative;
     display: flex;
-    justify-content: center;
+
     align-items: center;
     z-index: 2;
     height: 100%;
-    top: 0;
-    right: 0;
-    padding: 0;
+
     background-color: transparent;
     background-image: none;
     transform: translateX(0rem);
     transition: none;
+    width: 100%;
 
     &__list {
+      position: relative;
       display: flex;
-      height: 100%;
+      justify-content: flex-end;
+      height: 8rem;
+      width: 100%;
+      padding: 0 4rem;
     }
 
     &__item {
+      display: flex;
       position: relative;
-      text-align: center;
+      align-items: center;
       background-color: transparent;
       animation: fadeDown 1s;
       opacity: 0;
       animation-fill-mode: both;
-      animation-delay: 1.4s;
+      animation-delay: 1.8s;
+      height: 100%;
+      width: 10rem;
 
       &:nth-child(2) {
-        animation-delay: 1.6s;
+        animation-delay: 2s;
       }
 
       &:nth-child(3) {
-        animation-delay: 1.8s;
+        animation-delay: 2.2s;
+      }
+
+      &--icon {
+        display: flex;
+        position: relative;
+        text-align: center;
+        background-color: transparent;
+        animation: fadeDown 1s;
+        opacity: 0;
+        animation-fill-mode: both;
+        animation-delay: 2.2s;
+        height: 100%;
+        padding: 1rem 2rem;
+        transition: all 0.1s ease-in-out;
+        // width: 8rem;
+
+        &:nth-child(5) {
+          animation-delay: 2.4s;
+        }
+
+        &:nth-child(6) {
+          animation-delay: 2.6s;
+          padding-right: 0;
+        }
       }
     }
 
@@ -102,53 +137,37 @@
       height: 100%;
       width: 100%;
       color: var(--text-light);
-      font-size: 2.2rem;
-      font-weight: 700;
+      font-size: var(--hs-sm);
       padding: 1rem 2rem;
       text-decoration: none;
       cursor: pointer;
+      transition: all 0.4s ease;
 
       &:after {
         position: absolute;
-        bottom: 1.5rem;
+        bottom: 1rem;
         left: 0;
         right: 0;
         margin: auto;
         width: 0%;
-        content: ".";
+        content: "";
         background: var(--secondary);
         color: transparent;
-        height: 2px;
-        transition: all 0.5s;
+        transition: all 0.3s ease-in-out;
       }
 
-      &:hover {
-        color: var(--text-lightest);
-
-        &:after {
-          width: 80%;
-        }
-      }
-    }
-
-    //icon links hide on desktop
-    .link {
-      display: none;
-
-      &__nav {
-        display: none;
-      }
-
-      &__name {
-        display: none;
-      }
-
-      &:hover .link__name {
-        display: none;
-      }
-
-      &:hover .link__icon {
-        display: none;
+      &--icon {
+        height: 100%;
+        width: 100%;
+        color: var(--text-light);
+        font-size: var(--hs-sm);
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        transition: ease-in-out 0.3s;
       }
     }
   }
@@ -161,6 +180,12 @@
 
       &:after {
         width: 60%;
+      }
+    }
+
+    &--icon {
+      &:hover {
+        color: #d36661;
       }
     }
   }
@@ -191,24 +216,6 @@
       &:after {
         transform: rotate(135deg);
         background-color: var(--secondary);
-      }
-    }
-  }
-
-  .icon-navbar {
-    .link {
-      &:hover .link__name,
-      &:focus {
-        transition: all ease 0.5s;
-        transform: translateY(10px);
-        opacity: 1;
-      }
-
-      &:hover .link__icon,
-      &:focus {
-        transform: scale(1.1);
-        transition: all ease 0.5s;
-        color: var(--secondary);
       }
     }
   }

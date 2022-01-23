@@ -1,27 +1,77 @@
-.icon-navbar {
+.icon-nav {
   width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
 
-  .link {
+  &__item {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+  }
+
+  &__link {
     font-size: var(--fs-xl);
     cursor: pointer;
     text-decoration: none;
-    color: var(--text-lightest);
+    color: var(--text-light);
     text-align: center;
-    width: 10rem;
+  }
 
-    &__name {
-      opacity: 0;
-      margin-top: 0.5rem;
-      text-align: center;
-      font-size: var(--fs-sm);
-      font-weight: 500;
-      transform: translateY(-25px);
-      color: var(--text-lightest);
-      margin: 0 auto;
-      width: 100%;
+  &__title {
+    opacity: 0;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    transform: translateY(-25px);
+    color: var(--text-lightest);
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.contact-icon {
+  &.icon-nav__link {
+    font-size: var(--fs-lg);
+  }
+
+  &.icon-nav__title {
+    font-size: var(--fs-xs);
+  }
+}
+
+//tablet and bigger
+@media only screen and (min-width: $screen-md) {
+  //icon links hide on desktop
+  .icon-nav {
+    display: none;
+  }
+
+  .icon-navbar .icon-nav {
+    display: flex;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .icon-nav {
+    &__link {
+      &:hover .icon-nav__title,
+      &:focus {
+        transition: all ease 0.5s;
+        transform: translateY(10px);
+        opacity: 1;
+      }
+
+      &:hover .icon-nav__icon,
+      &:focus {
+        transform: scale(1.1);
+        transition: all ease 0.5s;
+        color: var(--secondary);
+      }
     }
   }
 }

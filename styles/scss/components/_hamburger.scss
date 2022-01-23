@@ -1,7 +1,7 @@
 .hamburger {
   background-color: transparent;
   cursor: pointer;
-  height: 5rem;
+
   border: none;
 
   &__box {
@@ -9,9 +9,9 @@
     z-index: 3;
     position: relative;
     margin: 0 auto;
-    height: 3rem;
+    height: 2.5rem;
     width: 2.8rem;
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   &__line {
@@ -19,12 +19,12 @@
     margin: 0 auto;
     transition: 0.5s;
     width: 3rem;
-    height: 2px;
+    height: 2.2px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translatex(-50%);
-    border-radius: 5px;
+    border-radius: 1000px;
 
     &::before,
     &::after {
@@ -33,11 +33,11 @@
     }
 
     &::before {
-      top: 10px;
+      top: 9px;
     }
 
     &::after {
-      top: -10px;
+      top: -9px;
     }
   }
 
