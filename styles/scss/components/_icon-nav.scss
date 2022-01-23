@@ -2,7 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  bottom: 5rem;
 
   &__item {
     list-style: none;

@@ -1,17 +1,18 @@
 .nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   z-index: 2;
   position: fixed;
-
   top: 0;
   right: 0;
-  width: 35rem;
+  width: 75%;
   height: 100%;
   background-image: var(--background-dark);
-  transform: translateX(50rem);
+  transform: translateX(100vw);
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
 
   &__list {
     list-style: none;
@@ -28,7 +29,7 @@
 
   &__link {
     color: var(--text-lighter);
-    font-size: 3rem;
+    font-size: var(--fs-xl);
     align-items: center;
     display: flex;
     justify-content: center;
@@ -68,7 +69,8 @@
   .nav {
     opacity: 1;
     display: flex;
-
+    animation: none !important;
+    transition: none !important;
     align-items: center;
     z-index: 2;
     height: 100%;
@@ -78,6 +80,9 @@
     transform: translateX(0rem);
     transition: none;
     width: 100%;
+
+    visibility: visible;
+    transition: none;
 
     &__list {
       position: relative;
@@ -96,16 +101,16 @@
       animation: fadeDown 1s;
       opacity: 0;
       animation-fill-mode: both;
-      animation-delay: 1.8s;
+      animation-delay: 1.4s;
       height: 100%;
       width: 10rem;
 
       &:nth-child(2) {
-        animation-delay: 2s;
+        animation-delay: 1.6s;
       }
 
       &:nth-child(3) {
-        animation-delay: 2.2s;
+        animation-delay: 1.8s;
       }
 
       &--icon {
@@ -116,18 +121,18 @@
         animation: fadeDown 1s;
         opacity: 0;
         animation-fill-mode: both;
-        animation-delay: 2.2s;
+        animation-delay: 2s;
         height: 100%;
         padding: 1rem 2rem;
         transition: all 0.1s ease-in-out;
         // width: 8rem;
 
         &:nth-child(5) {
-          animation-delay: 2.4s;
+          animation-delay: 2.2s;
         }
 
         &:nth-child(6) {
-          animation-delay: 2.6s;
+          animation-delay: 2.4s;
           padding-right: 0;
         }
       }
@@ -137,7 +142,7 @@
       height: 100%;
       width: 100%;
       color: var(--text-light);
-      font-size: var(--hs-sm);
+      font-size: var(--fs-sm);
       padding: 1rem 2rem;
       text-decoration: none;
       cursor: pointer;

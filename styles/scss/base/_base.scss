@@ -16,6 +16,11 @@ body {
   }
 }
 
+.scroll-lock {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .particle {
   position: absolute;
   display: block;

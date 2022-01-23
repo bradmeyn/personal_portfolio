@@ -1,7 +1,6 @@
 .hamburger {
   background-color: transparent;
   cursor: pointer;
-
   border: none;
 
   &__box {
@@ -12,6 +11,10 @@
     height: 2.5rem;
     width: 2.8rem;
     padding: 1.5rem;
+    animation: fadeDown 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
   }
 
   &__line {
@@ -43,7 +46,7 @@
 
   &.active {
     position: fixed;
-    right: 4rem;
+    right: 2rem;
     z-index: 100;
   }
 
@@ -68,7 +71,7 @@
 
   &.active ~ .nav {
     transform: translateX(0);
-    transition: all 0.5s;
+    visibility: visible;
   }
 
   &.active ~ .header__logo {

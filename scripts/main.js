@@ -2,14 +2,18 @@
 
 
 
-
-let ham = document.querySelector(".hamburger");
+const nav = document.querySelector('.nav');
+const ham = document.querySelector(".hamburger");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
 
+nav.style.transition = "none";
+
 ham.addEventListener("click", () => {
+  nav.style.transition = "all 0.4s ease-in-out";
   ham.classList.toggle("active");
   body.classList.toggle("blurry");
+  body.classList.toggle('scroll-lock');
 });
 
 
@@ -19,12 +23,14 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 760) {
     ham.classList.remove("active");
     body.classList.remove("blurry");
+    body.classList.remove('scroll-lock')
   }
 });
 
 content.addEventListener("click", () => {
   ham.classList.remove("active");
   body.classList.remove("blurry");
+  body.classList.remove('scroll-lock');
 });
 
 const links = document.querySelectorAll(".nav__item");
@@ -81,6 +87,17 @@ window.onload = () => {
     ],
   });
 };
+
+
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  nav.style.transition = "none";
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    nav.style.transition = "all 0.4s ease-in-out";
+  }, 400);
+});
 
 // /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 // let prevScrollpos = window.pageYOffset;

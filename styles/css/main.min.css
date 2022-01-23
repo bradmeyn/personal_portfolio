@@ -15,7 +15,7 @@
   --secondary: #ff5d4bdc;
   --secondary-light: #fd7061;
   --padding-desktop: 5rem 10rem;
-  --padding-mobile: 5rem 4rem;
+  --padding-mobile: 5rem 2rem;
   --font-body: "DM Sans", sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   --margin-sm: 0.5rem;
@@ -31,8 +31,8 @@
   --hs-xs: 1.5rem;
   --hs-sm: 2rem;
   --hs-md: 2.5rem;
-  --hs-lg: 3.5rem;
-  --hs-xl: 7rem;
+  --hs-lg: 3.2rem;
+  --hs-xl: 5rem;
 }
 
 @keyframes fadeIn {
@@ -83,6 +83,11 @@ body.blurry .content {
   display: block;
 }
 
+.scroll-lock {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .particle {
   position: absolute;
   display: block;
@@ -129,6 +134,10 @@ html {
   height: 2.5rem;
   width: 2.8rem;
   padding: 1.5rem;
+  animation: fadeDown 1s;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
 }
 
 .hamburger__line, .hamburger__line::before, .hamburger__line::after {
@@ -158,7 +167,7 @@ html {
 
 .hamburger.active {
   position: fixed;
-  right: 4rem;
+  right: 2rem;
   z-index: 100;
 }
 
@@ -182,7 +191,7 @@ html {
 
 .hamburger.active ~ .nav {
   transform: translateX(0);
-  transition: all 0.5s;
+  visibility: visible;
 }
 
 .hamburger.active ~ .header__logo {
@@ -199,16 +208,18 @@ html {
 .nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   z-index: 2;
   position: fixed;
   top: 0;
   right: 0;
-  width: 35rem;
+  width: 75%;
   height: 100%;
   background-image: var(--background-dark);
-  transform: translateX(50rem);
+  transform: translateX(100vw);
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav__list {
@@ -226,7 +237,7 @@ html {
 
 .nav__link {
   color: var(--text-lighter);
-  font-size: 3rem;
+  font-size: var(--fs-xl);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -258,6 +269,8 @@ html {
   .nav {
     opacity: 1;
     display: flex;
+    animation: none !important;
+    transition: none !important;
     align-items: center;
     z-index: 2;
     height: 100%;
@@ -266,6 +279,8 @@ html {
     transform: translateX(0rem);
     transition: none;
     width: 100%;
+    visibility: visible;
+    transition: none;
   }
   .nav__list {
     position: relative;
@@ -283,15 +298,15 @@ html {
     animation: fadeDown 1s;
     opacity: 0;
     animation-fill-mode: both;
-    animation-delay: 1.8s;
+    animation-delay: 1.4s;
     height: 100%;
     width: 10rem;
   }
   .nav__item:nth-child(2) {
-    animation-delay: 2s;
+    animation-delay: 1.6s;
   }
   .nav__item:nth-child(3) {
-    animation-delay: 2.2s;
+    animation-delay: 1.8s;
   }
   .nav__item--icon {
     display: flex;
@@ -301,23 +316,23 @@ html {
     animation: fadeDown 1s;
     opacity: 0;
     animation-fill-mode: both;
-    animation-delay: 2.2s;
+    animation-delay: 2s;
     height: 100%;
     padding: 1rem 2rem;
     transition: all 0.1s ease-in-out;
   }
   .nav__item--icon:nth-child(5) {
-    animation-delay: 2.4s;
+    animation-delay: 2.2s;
   }
   .nav__item--icon:nth-child(6) {
-    animation-delay: 2.6s;
+    animation-delay: 2.4s;
     padding-right: 0;
   }
   .nav__link {
     height: 100%;
     width: 100%;
     color: var(--text-light);
-    font-size: var(--hs-sm);
+    font-size: var(--fs-sm);
     padding: 1rem 2rem;
     text-decoration: none;
     cursor: pointer;
@@ -525,7 +540,8 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  bottom: 5rem;
 }
 
 .icon-nav__item {
@@ -846,7 +862,7 @@ html {
 }
 
 .header {
-  padding: 0 4rem;
+  padding: 0 2rem;
   position: absolute;
   background-color: transparent;
   width: 100%;
@@ -861,7 +877,7 @@ html {
 .header__logo {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: var(--hs-md);
   display: flex;
   align-items: center;
   color: var(--secondary);
@@ -869,7 +885,14 @@ html {
   animation: fadeDown 1s;
   opacity: 0;
   animation-fill-mode: both;
-  animation-delay: 1.4s;
+  animation-delay: 0.2s;
+}
+
+.header__logo::before {
+  position: absolute;
+  content: "BM.";
+  color: var(--text-lightest);
+  left: 4px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -899,7 +922,7 @@ html {
 }
 
 .landing__heading--intro {
-  animation: fadeIn 0.75s;
+  animation: fadeDown 0.6s;
   opacity: 0;
   animation-fill-mode: both;
   font-size: var(--hs-md);
@@ -909,7 +932,7 @@ html {
 }
 
 .landing__heading--name {
-  animation: fadeIn 0.75s;
+  animation: fadeIn 0.8s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 0.5s;
@@ -945,6 +968,7 @@ html {
   padding: var(--mobile-padding);
   background-image: var(--background-light);
   width: 100%;
+  scroll-snap-type: x mandatory;
 }
 
 .projects__heading {

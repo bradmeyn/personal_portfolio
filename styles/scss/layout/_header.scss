@@ -1,7 +1,7 @@
 //header
 
 .header {
-  padding: 0 4rem;
+  padding: 0 2rem;
   position: absolute;
   background-color: transparent;
   width: 100%;
@@ -15,16 +15,22 @@
   &__logo {
     font-family: var(--font-body);
     font-weight: 800;
-    font-size: 3rem;
+    font-size: var(--hs-md);
     display: flex;
     align-items: center;
     color: var(--secondary);
     order: -1;
-
     animation: fadeDown 1s;
     opacity: 0;
     animation-fill-mode: both;
-    animation-delay: 1.4s;
+    animation-delay: 0.2s;
+
+    &::before {
+      position: absolute;
+      content: "BM.";
+      color: var(--text-lightest);
+      left: 4px;
+    }
   }
 }
 

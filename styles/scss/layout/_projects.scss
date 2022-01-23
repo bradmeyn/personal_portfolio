@@ -2,6 +2,7 @@
   padding: var(--mobile-padding);
   background-image: var(--background-light);
   width: 100%;
+  scroll-snap-type: x mandatory;
 
   &__heading {
     font-size: var(--hs-lg);
