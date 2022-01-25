@@ -8,20 +8,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
   }
 
   &__text {
-    color: var(--text-light);
-    min-width: 35rem;
-    margin-bottom: var(--margin-lg);
+    color: var(--text-lighter);
+    min-width: 30rem;
+    margin-bottom: var(--margin-xl);
   }
 
   &__heading {
     font-size: var(--hs-lg);
     margin-bottom: var(--margin-xl);
     position: relative;
-    color: var(--text-lightest);
+    color: var(--secondary);
     flex-basis: 100%;
+
+    &::before {
+      position: absolute;
+      content: "About Me";
+      color: var(--text-lightest);
+      left: 5px;
+    }
 
     &::after {
       position: absolute;
@@ -36,35 +44,33 @@
   }
 
   &__paragraph {
-    font-size: var(--fs-md);
-    line-height: 1.3;
-    margin-bottom: 2rem;
+    font-size: var(--fs-sm);
+    line-height: 1.4;
+    margin-bottom: var(--margin-lg);
   }
 
-  .card {
-    padding: 2rem;
+  .profile {
+    padding: 4rem 2rem 2rem 2rem;
     backdrop-filter: blur(30px);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     margin: 0 auto;
-    min-width: 32rem;
-
-    &__profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: var(--margin-sm);
-    }
+    // min-width: 32rem;
 
     &__img {
-      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: auto 0;
+      top: -5rem;
       border: solid 3px var(--secondary-light);
       overflow: hidden;
       object-fit: contain;
-      width: 12rem;
-      height: 12rem;
+      width: 9rem;
+      height: 9rem;
+      border-radius: 50%;
+      margin: 0 auto;
       margin-bottom: var(--margin-md);
 
       img {
@@ -74,33 +80,28 @@
       }
     }
 
-    &__content {
-      display: block;
-
-      margin-bottom: var(--margin-sm);
+    &__subheading {
+      font-size: var(--fs-sm);
+      margin-bottom: var(--margin-md);
+      color: var(--text-lightest);
     }
 
-    &__heading {
-      text-align: center;
-      font-size: var(--hs-sm);
-      color: var(--text-lightest);
+    &__qualifications {
       margin-bottom: var(--margin-md);
     }
 
     &__detail {
-      text-align: center;
-      font-size: var(--fs-sm);
+      padding-left: 2rem;
+      font-size: var(--fs-xs);
       color: var(--text-light);
-      margin: 0 auto;
-      margin-bottom: var(--margin-sm);
+      margin-bottom: var(--margin-xs);
 
-      .icon {
+      i {
         display: inline-block;
-        font-size: var(--fs-sm);
+        font-size: var(--fs-xs);
         text-decoration: none;
         color: var(--secondary-light);
         width: 2.3rem;
-        text-align: center;
       }
     }
 
@@ -108,26 +109,16 @@
       flex: 1;
       margin: 0 auto;
 
-      .skills-heading {
-        font-size: var(--fs-md);
-        margin-bottom: var(--margin-md);
-        color: var(--text-lightest);
-      }
-
-      .skill-container {
-        display: flex;
-      }
-
       .skill-list {
         color: var(--text-light);
-        // border: solid 1px red;
+        display: inline-block;
         margin-left: 5rem;
         list-style: none;
-        font-size: var(--fs-sm);
       }
 
       .skill-item {
-        margin-bottom: var(--margin-sm);
+        margin-bottom: var(--margin-xs);
+        font-size: var(--fs-xs);
         position: relative;
 
         &::after {
@@ -136,7 +127,7 @@
           left: -2rem;
           content: " ";
           height: 2px;
-          width: 1rem;
+          width: 8px;
           background-color: var(--secondary);
         }
       }

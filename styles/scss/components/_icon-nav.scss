@@ -36,12 +36,16 @@
 }
 
 .contact-icon {
-  &.icon-nav__link {
-    font-size: var(--fs-lg);
-  }
+  &.icon-nav {
+    position: static;
 
-  &.icon-nav__title {
-    font-size: var(--fs-xs);
+    &__link {
+      font-size: var(--fs-lg);
+    }
+
+    &__title {
+      font-size: var(--fs-sm);
+    }
   }
 }
 

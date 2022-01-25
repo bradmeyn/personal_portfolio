@@ -18,12 +18,13 @@
   --padding-mobile: 5rem 2rem;
   --font-body: "DM Sans", sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  --margin-xs: 0.25rem;
   --margin-sm: 0.5rem;
   --margin-md: 1rem;
   --margin-lg: 2rem;
   --margin-xl: 4rem;
-  --fs--xxs: 1rem;
-  --fs-xs: 1.4rem;
+  --fs--xxs: 1.2rem;
+  --fs-xs: 1.5rem;
   --fs-sm: 1.6rem;
   --fs-md: 1.8rem;
   --fs-lg: 2.2rem;
@@ -32,7 +33,7 @@
   --hs-sm: 2rem;
   --hs-md: 2.5rem;
   --hs-lg: 3.2rem;
-  --hs-xl: 5rem;
+  --hs-xl: 5.8rem;
 }
 
 @keyframes fadeIn {
@@ -215,7 +216,7 @@ html {
   top: 0;
   right: 0;
   width: 75%;
-  height: 100%;
+  height: 100vh;
   background-image: var(--background-dark);
   transform: translateX(100vw);
   visibility: hidden;
@@ -573,12 +574,16 @@ html {
   width: 100%;
 }
 
+.contact-icon.icon-nav {
+  position: static;
+}
+
 .contact-icon.icon-nav__link {
   font-size: var(--fs-lg);
 }
 
 .contact-icon.icon-nav__title {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
 }
 
 @media only screen and (min-width: 768px) {
@@ -652,20 +657,28 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .about__text {
-  color: var(--text-light);
-  min-width: 35rem;
-  margin-bottom: var(--margin-lg);
+  color: var(--text-lighter);
+  min-width: 30rem;
+  margin-bottom: var(--margin-xl);
 }
 
 .about__heading {
   font-size: var(--hs-lg);
   margin-bottom: var(--margin-xl);
   position: relative;
-  color: var(--text-lightest);
+  color: var(--secondary);
   flex-basis: 100%;
+}
+
+.about__heading::before {
+  position: absolute;
+  content: "About Me";
+  color: var(--text-lightest);
+  left: 5px;
 }
 
 .about__heading::after {
@@ -680,108 +693,92 @@ html {
 }
 
 .about__paragraph {
-  font-size: var(--fs-md);
-  line-height: 1.3;
-  margin-bottom: 2rem;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  margin-bottom: var(--margin-lg);
 }
 
-.about .card {
-  padding: 2rem;
+.about .profile {
+  padding: 4rem 2rem 2rem 2rem;
   backdrop-filter: blur(30px);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   margin: 0 auto;
-  min-width: 32rem;
 }
 
-.about .card__profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--margin-sm);
-}
-
-.about .card__img {
-  border-radius: 50%;
+.about .profile__img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto 0;
+  top: -5rem;
   border: solid 3px var(--secondary-light);
   overflow: hidden;
   object-fit: contain;
-  width: 12rem;
-  height: 12rem;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  margin: 0 auto;
   margin-bottom: var(--margin-md);
 }
 
-.about .card__img img {
+.about .profile__img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.about .card__content {
-  display: block;
-  margin-bottom: var(--margin-sm);
+.about .profile__subheading {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--margin-md);
+  color: var(--text-lightest);
 }
 
-.about .card__heading {
-  text-align: center;
-  font-size: var(--hs-sm);
-  color: var(--text-lightest);
+.about .profile__qualifications {
   margin-bottom: var(--margin-md);
 }
 
-.about .card__detail {
-  text-align: center;
-  font-size: var(--fs-sm);
+.about .profile__detail {
+  padding-left: 2rem;
+  font-size: var(--fs-xs);
   color: var(--text-light);
-  margin: 0 auto;
-  margin-bottom: var(--margin-sm);
+  margin-bottom: var(--margin-xs);
 }
 
-.about .card__detail .icon {
+.about .profile__detail i {
   display: inline-block;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   text-decoration: none;
   color: var(--secondary-light);
   width: 2.3rem;
-  text-align: center;
 }
 
-.about .card__skills {
+.about .profile__skills {
   flex: 1;
   margin: 0 auto;
 }
 
-.about .card__skills .skills-heading {
-  font-size: var(--fs-md);
-  margin-bottom: var(--margin-md);
-  color: var(--text-lightest);
-}
-
-.about .card__skills .skill-container {
-  display: flex;
-}
-
-.about .card__skills .skill-list {
+.about .profile__skills .skill-list {
   color: var(--text-light);
+  display: inline-block;
   margin-left: 5rem;
   list-style: none;
-  font-size: var(--fs-sm);
 }
 
-.about .card__skills .skill-item {
-  margin-bottom: var(--margin-sm);
+.about .profile__skills .skill-item {
+  margin-bottom: var(--margin-xs);
+  font-size: var(--fs-xs);
   position: relative;
 }
 
-.about .card__skills .skill-item::after {
+.about .profile__skills .skill-item::after {
   position: absolute;
   top: 50%;
   left: -2rem;
   content: " ";
   height: 2px;
-  width: 1rem;
+  width: 8px;
   background-color: var(--secondary);
 }
 
@@ -925,9 +922,9 @@ html {
   animation: fadeDown 0.6s;
   opacity: 0;
   animation-fill-mode: both;
-  font-size: var(--hs-md);
+  font-size: var(--hs-sm);
   font-weight: 300;
-  color: var(--text-light);
+  color: var(--text-lighter);
   margin-bottom: var(--margin-lg);
 }
 
@@ -951,8 +948,8 @@ html {
 
 .landing__subheading {
   font-size: var(--hs-lg);
-  font-weight: 300;
-  color: var(--text-light);
+  font-weight: 700;
+  color: var(--text-lighter);
   margin-bottom: var(--margin-xl);
   animation: fadeInRight 1s;
   opacity: 0;
