@@ -35,13 +35,14 @@
       font-size: var(--hs-xl);
       display: block;
       margin-bottom: var(--margin-sm);
-      color: var(--secondary-light);
+      color: var(--secondary);
 
       &::before {
         position: absolute;
         content: "Brad Meyn.";
-        color: var(--text-lightest);
+        color: var(--white);
         left: 5px;
+        top: 2px;
       }
     }
   }

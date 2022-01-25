@@ -542,7 +542,7 @@ html {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 5rem;
+  bottom: 10rem;
 }
 
 .icon-nav__item {
@@ -678,7 +678,7 @@ html {
   position: absolute;
   content: "About Me";
   color: var(--text-lightest);
-  left: 5px;
+  left: 3px;
 }
 
 .about__heading::after {
@@ -883,13 +883,15 @@ html {
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 0.2s;
+  letter-spacing: 1px;
 }
 
 .header__logo::before {
   position: absolute;
   content: "BM.";
   color: var(--text-lightest);
-  left: 4px;
+  left: 2px;
+  top: 1px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -936,14 +938,15 @@ html {
   font-size: var(--hs-xl);
   display: block;
   margin-bottom: var(--margin-sm);
-  color: var(--secondary-light);
+  color: var(--secondary);
 }
 
 .landing__heading--name::before {
   position: absolute;
   content: "Brad Meyn.";
-  color: var(--text-lightest);
+  color: var(--white);
   left: 5px;
+  top: 2px;
 }
 
 .landing__subheading {

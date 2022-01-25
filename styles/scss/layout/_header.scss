@@ -24,12 +24,14 @@
     opacity: 0;
     animation-fill-mode: both;
     animation-delay: 0.2s;
+    letter-spacing: 1px;
 
     &::before {
       position: absolute;
       content: "BM.";
       color: var(--text-lightest);
-      left: 4px;
+      left: 2px;
+      top: 1px;
     }
   }
 }
