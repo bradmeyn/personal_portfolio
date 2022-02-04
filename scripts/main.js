@@ -38,8 +38,10 @@ const links = document.querySelectorAll(".nav__item");
 links.forEach((link) => {
   link.addEventListener("click", () => {
     if (window.innerWidth < 768) {
+      body.classList.toggle('scroll-lock');
       ham.classList.toggle("active");
       body.classList.toggle("blurry");
+      
     }
   });
 });

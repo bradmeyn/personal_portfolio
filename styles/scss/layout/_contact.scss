@@ -1,6 +1,6 @@
 .contact {
   padding: var(--mobile-padding);
-  background-image: linear-gradient(to top, #1a2940 0%, #33445e 100%);
+  background: var(--primary);
   text-align: center;
 
   &__content {
@@ -21,9 +21,9 @@
   }
 
   &__text {
-    color: var(--text-light);
+    color: var(--text-lightest);
     font-size: var(--fs-md);
-    line-height: 1.3;
+    line-height: 1.5;
     padding-bottom: var(--margin-xl);
 
     &--email {

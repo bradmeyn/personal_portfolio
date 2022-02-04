@@ -3,14 +3,16 @@
   background-color: var(--secondary);
   color: #ffffff;
   text-align: center;
-  padding: 1rem 1.8rem;
+  padding: 0.8rem 2rem;
   font-family: var(--font-body);
   text-decoration: none;
   cursor: pointer;
+  // box-shadow: 0 0 10px var(--secondary);
 
   &:hover,
   &:focus {
     background-color: var(--secondary-light);
+    background-position: right center;
   }
 }
 
@@ -18,7 +20,7 @@
   @extend .btn;
   display: inline-block;
   position: relative;
-  font-size: var(--hs-sm);
+  font-size: var(--fs-md);
   transition: all 0.3s ease;
   animation: fadeIn 0.75s;
   opacity: 0;
@@ -26,11 +28,19 @@
   animation-delay: 1.5s;
   margin: 0;
 
+  background-size: 200% auto;
+
+  background-image: linear-gradient(
+    to right,
+    #eb3349 0%,
+    #f45c43 51%,
+    #eb3349 100%
+  );
   i {
     position: relative;
     margin-left: 3px;
     transition: all 0.2s ease-in-out;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
   }
 
   &:hover,
@@ -39,4 +49,31 @@
       transform: translatex(3px);
     }
   }
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #141e30 0%,
+    #243b55 51%,
+    #141e30 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

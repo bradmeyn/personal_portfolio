@@ -12,7 +12,7 @@
 
   &__content {
     position: relative;
-    top: 30%;
+    top: 20%;
     z-index: 1;
   }
 
@@ -48,8 +48,8 @@
   }
 
   &__subheading {
-    font-size: var(--hs-lg);
-    font-weight: 700;
+    font-size: var(--hs-md);
+    font-weight: 500;
     color: var(--text-lighter);
     margin-bottom: var(--margin-xl);
     animation: fadeInRight 1s;

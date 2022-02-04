@@ -1,7 +1,6 @@
 .about {
-  background-color: var(--primary);
-  background-image: var(--background-dark);
-  font-weight: 300;
+  background: #141e30;
+
   padding: var(--mobile-padding);
 
   &__content {
@@ -14,6 +13,7 @@
   &__text {
     color: var(--text-lighter);
     min-width: 30rem;
+
     margin-bottom: var(--margin-xl);
   }
 
@@ -35,8 +35,8 @@
       position: absolute;
       content: "";
       width: 5rem;
-      border: 2px solid var(--secondary-light);
-      top: 5rem;
+      border: 2px solid var(--secondary);
+      top: 6.5rem;
       height: 0;
       border-radius: 0 1000px 1000px 0;
       left: 0;
@@ -44,8 +44,8 @@
   }
 
   &__paragraph {
-    font-size: var(--fs-sm);
-    line-height: 1.4;
+    font-size: var(--fs-md);
+    line-height: 1.5;
     margin-bottom: var(--margin-lg);
   }
 
@@ -54,8 +54,9 @@
     backdrop-filter: blur(30px);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
-    margin: 0 auto;
+    border-radius: 10px;
+    margin: 2rem auto;
+
     // min-width: 32rem;
 
     &__img {
@@ -64,7 +65,7 @@
       transform: translateX(-50%);
       margin: auto 0;
       top: -5rem;
-      border: solid 3px var(--secondary-light);
+      border: solid 3px var(--secondary);
       overflow: hidden;
       object-fit: contain;
       width: 9rem;
@@ -81,7 +82,7 @@
     }
 
     &__subheading {
-      font-size: var(--fs-sm);
+      font-size: var(--fs-md);
       margin-bottom: var(--margin-md);
       color: var(--text-lightest);
     }
@@ -91,16 +92,17 @@
     }
 
     &__detail {
-      padding-left: 2rem;
-      font-size: var(--fs-xs);
+      margin-left: 2rem;
       color: var(--text-light);
+      font-size: var(--fs-sm);
       margin-bottom: var(--margin-xs);
 
       i {
+        margin-right: 1rem;
         display: inline-block;
-        font-size: var(--fs-xs);
+        font-size: var(--fs-sm);
         text-decoration: none;
-        color: var(--secondary-light);
+        color: var(--secondary);
         width: 2.3rem;
       }
     }
@@ -118,7 +120,7 @@
 
       .skill-item {
         margin-bottom: var(--margin-xs);
-        font-size: var(--fs-xs);
+        font-size: var(--fs-sm);
         position: relative;
 
         &::after {
@@ -143,8 +145,8 @@
       min-width: 45rem;
     }
 
-    .card {
-      margin: 0 autp;
+    .profile {
+      margin: 0;
     }
   }
 }

@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 10rem;
+  margin-top: 6rem;
+  padding-bottom: 2rem;
 
   &__item {
     list-style: none;
@@ -15,7 +15,7 @@
   }
 
   &__link {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-lg);
     cursor: pointer;
     text-decoration: none;
     color: var(--text-light);
