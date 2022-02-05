@@ -5,7 +5,7 @@
   justify-content: center;
 
   width: 100%;
-  max-width: 100rem;
+  max-width: 50rem;
   overflow: hidden;
   border-radius: 15px;
   backdrop-filter: blur(30px);
@@ -17,6 +17,8 @@
 
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+
+  background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
   &__text-container {
     width: 100%;
     max-width: 40rem;
@@ -41,22 +43,35 @@
   &__img-container {
     order: 2;
     width: 100%;
-    // max-width: 50rem;
+
+    max-width: 42rem;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
     margin: 2rem auto 0;
     border-radius: 10px;
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-
+    border: solid 8px var(--primary);
     // background: var(--text-darker);
 
-    img {
+    .project__img--desktop {
       position: relative;
       width: 100%;
       transition: all 0.6s ease;
-      border-radius: 10px;
+    }
+
+    .project__img--mobile {
+      width: 100%;
+      transition: all 0.6s ease;
+      border-radius: 15px;
+      position: absolute;
+      border: solid 4px var(--primary);
+      max-width: 20%;
+      right: -2rem;
+      bottom: -2rem;
+      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
     }
   }
 
@@ -82,11 +97,12 @@
 
     .project__link {
       display: flex;
+      align-items: center;
       flex-wrap: nowrap;
-      font-size: 1.6rem;
+      font-size: var(--fs-md);
       text-decoration: none;
       cursor: pointer;
-      align-items: center;
+
       padding: 0.3rem 1.2rem;
       transition: all 0.3s ease;
       color: var(--secondary);
@@ -99,7 +115,7 @@
 
       &--live {
         color: #ffffff;
-        border-radius: 16.5px;
+        border-radius: 15px;
         background: var(--secondary);
         border: solid 1px var(--secondary);
 
@@ -122,15 +138,17 @@
 @media only screen and (min-width: $screen-md) {
   .project {
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120rem;
 
     &__img-container {
       margin: 0;
     }
 
     &__text-container {
-      padding: 2rem 4rem 0 0;
+      padding: 2rem 2rem 0 0;
+      margin-bottom: auto;
     }
   }
 }

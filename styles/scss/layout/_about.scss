@@ -64,7 +64,7 @@
       left: 50%;
       transform: translateX(-50%);
       margin: auto 0;
-      top: -5rem;
+      top: -6rem;
       border: solid 3px var(--secondary);
       overflow: hidden;
       object-fit: contain;
@@ -82,7 +82,7 @@
     }
 
     &__subheading {
-      font-size: var(--fs-md);
+      font-size: var(--fs-lg);
       margin-bottom: var(--margin-md);
       color: var(--text-lightest);
     }
@@ -94,8 +94,8 @@
     &__detail {
       margin-left: 2rem;
       color: var(--text-light);
-      font-size: var(--fs-sm);
-      margin-bottom: var(--margin-xs);
+      font-size: var(--fs-md);
+      line-height: 1.5;
 
       i {
         margin-right: 1rem;
@@ -119,8 +119,8 @@
       }
 
       .skill-item {
-        margin-bottom: var(--margin-xs);
-        font-size: var(--fs-sm);
+        font-size: var(--fs-md);
+        line-height: 1.5;
         position: relative;
 
         &::after {

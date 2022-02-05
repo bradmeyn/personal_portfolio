@@ -333,7 +333,7 @@ html {
     height: 100%;
     width: 100%;
     color: var(--text-light);
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
     padding: 1rem 2rem;
     text-decoration: none;
     cursor: pointer;
@@ -404,7 +404,7 @@ html {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  max-width: 100rem;
+  max-width: 50rem;
   overflow: hidden;
   border-radius: 15px;
   backdrop-filter: blur(30px);
@@ -415,6 +415,7 @@ html {
   background-image: linear-gradient(to bottom right, #4c4177 0%, #2a5470 74%);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
 }
 
 .project__text-container {
@@ -441,20 +442,33 @@ html {
 .project__img-container {
   order: 2;
   width: 100%;
+  max-width: 42rem;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   margin: 2rem auto 0;
   border-radius: 10px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  border: solid 8px var(--primary);
 }
 
-.project__img-container img {
+.project__img-container .project__img--desktop {
   position: relative;
   width: 100%;
   transition: all 0.6s ease;
-  border-radius: 10px;
+}
+
+.project__img-container .project__img--mobile {
+  width: 100%;
+  transition: all 0.6s ease;
+  border-radius: 15px;
+  position: absolute;
+  border: solid 4px var(--primary);
+  max-width: 20%;
+  right: -2rem;
+  bottom: -2rem;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .project__badge-container {
@@ -479,11 +493,11 @@ html {
 
 .project__links .project__link {
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
-  font-size: 1.6rem;
+  font-size: var(--fs-md);
   text-decoration: none;
   cursor: pointer;
-  align-items: center;
   padding: 0.3rem 1.2rem;
   transition: all 0.3s ease;
   color: var(--secondary);
@@ -497,7 +511,7 @@ html {
 
 .project__links .project__link--live {
   color: #ffffff;
-  border-radius: 16.5px;
+  border-radius: 15px;
   background: var(--secondary);
   border: solid 1px var(--secondary);
 }
@@ -515,14 +529,16 @@ html {
 @media only screen and (min-width: 768px) {
   .project {
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120rem;
   }
   .project__img-container {
     margin: 0;
   }
   .project__text-container {
-    padding: 2rem 4rem 0 0;
+    padding: 2rem 2rem 0 0;
+    margin-bottom: auto;
   }
 }
 
@@ -627,24 +643,28 @@ html {
 }
 
 .btn--landing {
-  display: inline-block;
   position: relative;
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   transition: all 0.3s ease;
   animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 1.5s;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  max-width: 14rem;
   background-size: 200% auto;
   background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
 }
 
 .btn--landing i {
   position: relative;
-  margin-left: 3px;
+  margin-left: 8px;
   transition: all 0.2s ease-in-out;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-md);
 }
 
 .btn--landing:hover i, .btn--landing:focus i {
@@ -739,7 +759,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   margin: auto 0;
-  top: -5rem;
+  top: -6rem;
   border: solid 3px var(--secondary);
   overflow: hidden;
   object-fit: contain;
@@ -757,7 +777,7 @@ html {
 }
 
 .about .profile__subheading {
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   margin-bottom: var(--margin-md);
   color: var(--text-lightest);
 }
@@ -769,8 +789,8 @@ html {
 .about .profile__detail {
   margin-left: 2rem;
   color: var(--text-light);
-  font-size: var(--fs-sm);
-  margin-bottom: var(--margin-xs);
+  font-size: var(--fs-md);
+  line-height: 1.5;
 }
 
 .about .profile__detail i {
@@ -795,8 +815,8 @@ html {
 }
 
 .about .profile__skills .skill-item {
-  margin-bottom: var(--margin-xs);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
+  line-height: 1.5;
   position: relative;
 }
 
@@ -823,7 +843,7 @@ html {
 
 .contact {
   padding: var(--mobile-padding);
-  background: var(--primary);
+  background: #141e30;
   text-align: center;
 }
 

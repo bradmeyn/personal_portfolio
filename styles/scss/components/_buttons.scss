@@ -7,6 +7,7 @@
   font-family: var(--font-body);
   text-decoration: none;
   cursor: pointer;
+
   // box-shadow: 0 0 10px var(--secondary);
 
   &:hover,
@@ -18,15 +19,19 @@
 
 .btn--landing {
   @extend .btn;
-  display: inline-block;
   position: relative;
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   transition: all 0.3s ease;
   animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 1.5s;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  max-width: 14rem;
 
   background-size: 200% auto;
 
@@ -38,9 +43,9 @@
   );
   i {
     position: relative;
-    margin-left: 3px;
+    margin-left: 8px;
     transition: all 0.2s ease-in-out;
-    font-size: var(--fs-xs);
+    font-size: var(--fs-md);
   }
 
   &:hover,
