@@ -57,8 +57,6 @@
     border-radius: 10px;
     margin: 2rem auto;
 
-    // min-width: 32rem;
-
     &__img {
       position: absolute;
       left: 50%;
@@ -92,29 +90,32 @@
     }
 
     &__detail {
-      margin-left: 2rem;
+      margin-left: 1rem;
       color: var(--text-light);
       font-size: var(--fs-md);
       line-height: 1.5;
 
       i {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         display: inline-block;
         font-size: var(--fs-sm);
         text-decoration: none;
         color: var(--secondary);
-        width: 2.3rem;
+        // width: 2.3rem;
       }
     }
 
     &__skills {
       flex: 1;
+      display: flex;
+      justify-content: space-around;
       margin: 0 auto;
 
       .skill-list {
         color: var(--text-light);
         display: inline-block;
-        margin-left: 5rem;
+        // margin: 0 auto;
+        // margin-left: 4rem;
         list-style: none;
       }
 
@@ -123,15 +124,15 @@
         line-height: 1.5;
         position: relative;
 
-        &::after {
-          position: absolute;
-          top: 50%;
-          left: -2rem;
-          content: " ";
-          height: 2px;
-          width: 8px;
-          background-color: var(--secondary);
-        }
+        // &::after {
+        //   position: absolute;
+        //   top: 50%;
+        //   left: -2rem;
+        //   content: " ";
+        //   height: 2px;
+        //   width: 8px;
+        //   background-color: var(--secondary);
+        // }
       }
     }
   }

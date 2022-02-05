@@ -410,7 +410,7 @@ html {
   backdrop-filter: blur(30px);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 4rem;
+  padding: 2rem;
   background-color: #4c4177;
   background-image: linear-gradient(to bottom right, #4c4177 0%, #2a5470 74%);
   background: rgba(255, 255, 255, 0.1);
@@ -460,12 +460,12 @@ html {
 }
 
 .project__img-container .project__img--mobile {
-  width: 100%;
   transition: all 0.6s ease;
-  border-radius: 15px;
+  border-radius: 10px;
   position: absolute;
   border: solid 4px var(--primary);
-  max-width: 20%;
+  height: 80%;
+  width: 23%;
   right: -2rem;
   bottom: -2rem;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
@@ -532,6 +532,7 @@ html {
     justify-content: space-between;
     align-items: center;
     max-width: 120rem;
+    padding: 4rem;
   }
   .project__img-container {
     margin: 0;
@@ -787,30 +788,30 @@ html {
 }
 
 .about .profile__detail {
-  margin-left: 2rem;
+  margin-left: 1rem;
   color: var(--text-light);
   font-size: var(--fs-md);
   line-height: 1.5;
 }
 
 .about .profile__detail i {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   display: inline-block;
   font-size: var(--fs-sm);
   text-decoration: none;
   color: var(--secondary);
-  width: 2.3rem;
 }
 
 .about .profile__skills {
   flex: 1;
+  display: flex;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
 .about .profile__skills .skill-list {
   color: var(--text-light);
   display: inline-block;
-  margin-left: 5rem;
   list-style: none;
 }
 
@@ -818,16 +819,6 @@ html {
   font-size: var(--fs-md);
   line-height: 1.5;
   position: relative;
-}
-
-.about .profile__skills .skill-item::after {
-  position: absolute;
-  top: 50%;
-  left: -2rem;
-  content: " ";
-  height: 2px;
-  width: 8px;
-  background-color: var(--secondary);
 }
 
 @media only screen and (min-width: 768px) {
