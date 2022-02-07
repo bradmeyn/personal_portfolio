@@ -819,8 +819,10 @@ html {
 }
 
 .about .profile__img img {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 130%;
+  width: 130%;
+  bottom: 20px;
   object-fit: cover;
 }
 
