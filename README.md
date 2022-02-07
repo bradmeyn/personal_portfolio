@@ -1,13 +1,27 @@
-### Welcome to my portfolio
+# Welcome to my portfolio
 
-This is my own personal site with access to some of my projects, Github & CodePen. 
+### Description
 
-### Made using:
+My personal developer portfolio for showcasing various applications I have built.
+
+## Software Used
 
 - HTML
-- CSS & Sass (BEM notation for styling)
+- CSS
+- Sass
 - Javascript
-- Animate on Scroll
-- Font Awesome.
+- Animate on Scroll library
+- Font Awesome for icons
+- Netlify for Hosting
 
-Thanks for visiting.
+## Techniques Demonstrated
+
+- Mobile-first design
+- DOM manipulation w/ Javascript
+- Animations with CSS
+- BEM styling notation
+- Structured style sheets with Sass
+
+### Thanks for visiting
+
+
