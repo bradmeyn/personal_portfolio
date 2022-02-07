@@ -484,7 +484,9 @@ html {
 }
 
 .project__badge-container {
-  margin-bottom: var(--margin-xl);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
   font-weight: 500;
 }
 
@@ -494,7 +496,7 @@ html {
   color: var(--text-darker);
   border-radius: 5px;
   padding: 0.25rem 0.5rem;
-  margin-right: 1rem;
+  margin: 0 1rem 1rem 0;
 }
 
 .project__links {
@@ -676,12 +678,13 @@ html {
 
 .project__link--live {
   background-image: var(--gradient-secondary);
+  margin-right: 2rem;
 }
 
 .project__link--repo {
   background-color: transparent;
   background-image: none;
-  margin-left: 2rem;
+  padding-left: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {

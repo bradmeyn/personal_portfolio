@@ -76,8 +76,10 @@
   }
 
   &__badge-container {
-    margin-bottom: var(--margin-xl);
+    display: flex;
 
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
     font-weight: 500;
 
     .badge {
@@ -86,7 +88,7 @@
       color: var(--text-darker);
       border-radius: 5px;
       padding: 0.25rem 0.5rem;
-      margin-right: 1rem;
+      margin: 0 1rem 1rem 0;
     }
   }
 

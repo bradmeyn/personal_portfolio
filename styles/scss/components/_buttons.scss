@@ -81,12 +81,13 @@
 
   &--live {
     background-image: var(--gradient-secondary);
+    margin-right: 2rem;
   }
 
   &--repo {
     background-color: transparent;
     background-image: none;
-    margin-left: 2rem;
+    padding-left: 0;
   }
 }
 

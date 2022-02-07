@@ -54,11 +54,11 @@
             </a>
           </li>
 
-          <li class="nav__item--icon">
+          <!-- <li class="nav__item--icon">
             <a href="#contact" class="nav__link--icon"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-          </li>
+          </li> -->
         </ul>
 
         <ul class="icon-nav">
@@ -76,7 +76,7 @@
           </li>
           <li class="icon-nav__item">
             <a
-              href="https://github.com/bradmeyn"
+              href="https://codepen.io/bradmeyn"
               target="_blank"
               class="icon-nav__link"
             >
@@ -86,7 +86,7 @@
               </span>
             </a>
           </li>
-          <li class="icon-nav__item">
+          <!-- <li class="icon-nav__item">
             <a
               href="https://github.com/bradmeyn"
               target="_blank"
@@ -97,7 +97,7 @@
                 <div class="icon-nav__title">Linkedin</div>
               </span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </header>
@@ -225,12 +225,17 @@
               various technologies & concepts.
             </p>
             <div class="project__container">
+              <!-- clientbook -->
               <article
                 class="project"
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                <a href="#" class="project__img-container">
+                <a
+                  target="_blank"
+                  href="https://github.com/bradmeyn/clientBook"
+                  class="project__img-container"
+                >
                   <img
                     class="project__img--desktop"
                     src="images/portfolio_desktop.png"
@@ -243,65 +248,133 @@
                   />
                 </a>
                 <div class="project__text-container">
-                  <h3 class="project__heading">Project</h3>
+                  <h3 class="project__heading">ClientBook (WIP)</h3>
                   <p class="project__description">
-                    laborum velit corporis molestias praesentium magnam
-                    repudiandae dolorem nemo, itaque harum!
+                    Client relationship management tool featuring CRUD
+                    functionality for Clients, Notes & Jobs.
                   </p>
+
                   <div class="project__badge-container">
                     <span class="badge">HTML</span>
                     <span class="badge">CSS</span>
                     <span class="badge">JAVSCRIPT</span>
+                    <span class="badge">BOOTSTRAP</span>
                     <span class="badge">NODE</span>
+                    <span class="badge">EXPRESS</span>
+                    <span class="badge">EJS</span>
+                    <span class="badge">MONGODB</span>
                   </div>
                   <div class="project__links">
-                    <a class="project__link project__link--live" href=""
+                    <!-- <a class="project__link project__link--live" href=""
                       ><span>Live Site</span>
                       <i class="fas fa-chevron-right"></i
-                    ></a>
-                    <a class="project__link project__link--repo" href=""
+                    ></a> -->
+                    <a
+                      class="project__link project__link--repo"
+                      target="_blank"
+                      href="https://github.com/bradmeyn/clientBook"
                       ><span>Repository</span>
                       <i class="fas fa-chevron-right"></i
                     ></a>
                   </div>
                 </div>
               </article>
-
+              <!-- React Todo -->
               <article
                 class="project"
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                <a href="#" class="project__img-container">
+                <a
+                  target="_blank"
+                  href="https://bradmeyn.github.io/react-todo-list/"
+                  class="project__img-container"
+                >
                   <img
                     class="project__img--desktop"
-                    src="images/portfolio_desktop.png"
+                    src="images/todo_desktop.png"
                     alt=""
                   />
                   <img
                     class="project__img--mobile"
-                    src="images/portfolio_mobile.png"
+                    src="images/todo_mobile.png"
                     alt=""
                   />
                 </a>
                 <div class="project__text-container">
-                  <h3 class="project__heading">Project</h3>
+                  <h3 class="project__heading">Todo List</h3>
                   <p class="project__description">
-                    laborum velit corporis molestias praesentium magnam
-                    repudiandae dolorem nemo, itaque harum!
+                    Todo list built initially with Class-based components, then
+                    updated to utilise Hooks. Tasks saved to localstorage.
+                  </p>
+                  <div class="project__badge-container">
+                    <span class="badge">React</span>
+                    <span class="badge">CSS</span>
+                  </div>
+                  <div class="project__links">
+                    <a
+                      class="project__link project__link--live"
+                      target="_blank"
+                      href="https://bradmeyn.github.io/react-todo-list/"
+                      ><span>Live Site</span>
+                      <i class="fas fa-chevron-right"></i
+                    ></a>
+                    <a
+                      class="project__link project__link--repo"
+                      target="_blank"
+                      href="https://github.com/bradmeyn/react-todo-list"
+                      ><span>Repository</span>
+                      <i class="fas fa-chevron-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+              <!-- Investment Growth Calculator -->
+              <article
+                class="project"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <a
+                  target="_blank"
+                  href="https://investment-growth-calculator.netlify.app/"
+                  class="project__img-container"
+                >
+                  <img
+                    class="project__img--desktop"
+                    src="images/invest_desktop.png"
+                    alt=""
+                  />
+                  <img
+                    class="project__img--mobile"
+                    src="images/invest_mobile.png"
+                    alt=""
+                  />
+                </a>
+                <div class="project__text-container">
+                  <h3 class="project__heading">Investment Growth Calculator</h3>
+                  <p class="project__description">
+                    Interactive tool to project future value of an investment.
+                    Using Chart.JS for visualisations.
                   </p>
                   <div class="project__badge-container">
                     <span class="badge">HTML</span>
                     <span class="badge">CSS</span>
+                    <span class="badge">SASS</span>
                     <span class="badge">JAVSCRIPT</span>
-                    <span class="badge">NODE</span>
                   </div>
                   <div class="project__links">
-                    <a class="project__link project__link--live" href=""
+                    <a
+                      class="project__link project__link--live"
+                      target="_blank"
+                      href="https://investment-growth-calculator.netlify.app/"
                       ><span>Live Site</span>
                       <i class="fas fa-chevron-right"></i
                     ></a>
-                    <a class="project__link project__link--repo" href=""
+                    <a
+                      class="project__link project__link--repo"
+                      target="_blank"
+                      href="https://github.com/bradmeyn/compound_interest_calculator"
                       ><span>Repository</span>
                       <i class="fas fa-chevron-right"></i
                     ></a>
@@ -309,12 +382,17 @@
                 </div>
               </article>
 
+              <!-- Personal Portfolio -->
               <article
                 class="project"
-                data-aos="fade-right"
+                data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                <a href="#" class="project__img-container">
+                <a
+                  target="_blank"
+                  href="https://github.com/bradmeyn/personal_portfolio"
+                  class="project__img-container"
+                >
                   <img
                     class="project__img--desktop"
                     src="images/portfolio_desktop.png"
@@ -327,23 +405,21 @@
                   />
                 </a>
                 <div class="project__text-container">
-                  <h3 class="project__heading">Project</h3>
+                  <h3 class="project__heading">Personal Site</h3>
                   <p class="project__description">
-                    laborum velit corporis molestias praesentium magnam
-                    repudiandae dolorem nemo, itaque harum!
+                    This is my personal portfolio you are currently visiting.
                   </p>
                   <div class="project__badge-container">
                     <span class="badge">HTML</span>
                     <span class="badge">CSS</span>
+                    <span class="badge">SASS</span>
                     <span class="badge">JAVSCRIPT</span>
-                    <span class="badge">NODE</span>
                   </div>
                   <div class="project__links">
-                    <a class="project__link project__link--live" href=""
-                      ><span>Live Site</span>
-                      <i class="fas fa-chevron-right"></i
-                    ></a>
-                    <a class="project__link project__link--repo" href=""
+                    <a
+                      class="project__link project__link--repo"
+                      target="_blank"
+                      href="https://github.com/bradmeyn/personal_portfolio"
                       ><span>Repository</span>
                       <i class="fas fa-chevron-right"></i
                     ></a>
@@ -411,7 +487,7 @@
                     </span>
                   </a>
                 </li>
-                <li class="icon-nav__item">
+                <!-- <li class="icon-nav__item">
                   <a
                     href="https://github.com/bradmeyn"
                     target="_blank"
@@ -422,7 +498,7 @@
                       <div class="icon-nav__title contact-icon">Linkedin</div>
                     </span>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
