@@ -42,7 +42,7 @@
   --fs-xl: 3rem;
   --hs-xs: 1.5rem;
   --hs-sm: 2rem;
-  --hs-md: 3.5rem;
+  --hs-md: 3rem;
   --hs-lg: 4.5rem;
   --hs-xl: 6.5rem;
 }
@@ -445,7 +445,7 @@ html {
 }
 
 .project__text-container .project__description {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   line-height: 1.5;
   margin-bottom: var(--margin-lg);
   color: var(--text-light);
@@ -487,15 +487,15 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1rem;
-  font-weight: 500;
 }
 
 .project__badge-container .badge {
   font-size: var(--fs-xs);
+  font-weight: 700;
   background-color: var(--primary-light);
   color: var(--text-darker);
   border-radius: 5px;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   margin: 0 1rem 1rem 0;
 }
 
