@@ -1,57 +1,140 @@
 .btn {
   border-radius: 50px;
-  background-color: var(--secondary);
-  color: #ffffff;
   text-align: center;
-  padding: 0.8rem 2rem;
   font-family: var(--font-body);
   text-decoration: none;
   cursor: pointer;
-
-  // box-shadow: 0 0 10px var(--secondary);
-
-  &:hover,
-  &:focus {
-    background-color: var(--secondary-light);
-    background-position: right center;
-  }
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn--landing {
   @extend .btn;
-  position: relative;
-  font-size: var(--fs-lg);
-  transition: all 0.3s ease;
   animation: fadeIn 0.75s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 1.5s;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  max-width: 14rem;
-
+  position: relative;
+  font-size: var(--hs-sm);
+  background-color: var(--secondary);
+  color: #ffffff;
   background-size: 200% auto;
 
   background-image: linear-gradient(
     to right,
     #eb3349 0%,
-    #f45c43 51%,
+    var(--secondary) 51%,
     #eb3349 100%
   );
+
   i {
     position: relative;
+    margin-top: 3px;
     margin-left: 8px;
     transition: all 0.2s ease-in-out;
-    font-size: var(--fs-md);
+    font-size: var(--hs-xs);
+  }
+}
+
+.btn--contact {
+  @extend .btn;
+  width: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  font-size: var(--hs-sm);
+  background-color: var(--secondary);
+  color: #ffffff;
+  background-size: 200% auto;
+  background-image: var(--gradient-secondary);
+  transition: all 0.3s ease-in-out;
+
+  i {
+    position: relative;
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+    font-size: var(--hs-xs);
+  }
+}
+
+.project__link {
+  @extend .btn;
+  color: var(--text-lightest);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: var(--fs-md);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.3rem 1.2rem;
+  transition: all 0.3s ease-in-out;
+  background-image: var(--gradient-secondary);
+
+  i {
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-left: 0.6rem;
   }
 
-  &:hover,
-  &:focus {
-    i {
-      transform: translatex(3px);
+  &--live {
+    background-image: var(--gradient-secondary);
+  }
+
+  &--repo {
+    background-color: transparent;
+    background-image: none;
+    margin-left: 2rem;
+  }
+}
+
+//hover on non-touch screens
+@media (hover: hover) and (pointer: fine) {
+  .btn--landing {
+    &:hover,
+    &:focus {
+      background-position: right center;
+
+      i {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  .btn--contact {
+    &:hover,
+    &:focus {
+      background-position: right center;
+
+      i {
+        transform: translateX(3px) rotate(30deg);
+      }
+    }
+  }
+
+  .project__link {
+    transition: 0.5s;
+    &:hover {
+      background-position: right center;
+
+      i {
+        transform: translateX(3px);
+      }
+    }
+
+    &--live {
+      &:hover {
+      }
+    }
+
+    &--repo {
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
@@ -59,9 +142,9 @@
 .btn-grad {
   background-image: linear-gradient(
     to right,
-    #141e30 0%,
-    #243b55 51%,
-    #141e30 100%
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
   );
 }
 .btn-grad {

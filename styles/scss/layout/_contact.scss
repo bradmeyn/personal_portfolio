@@ -1,6 +1,6 @@
 .contact {
   padding: var(--mobile-padding);
-  background: #141e30;
+  background: var(--background-dark);
   text-align: center;
 
   &__content {
@@ -9,11 +9,19 @@
   }
 
   &__heading {
-    text-align: center;
-    color: var(--text-lightest);
     font-size: var(--hs-lg);
     margin-bottom: var(--margin-xl);
+    color: var(--secondary);
+    text-align: center;
     position: relative;
+
+    &::before {
+      position: absolute;
+      content: "Contact Me";
+      text-align: center;
+      transform: translateX(5px);
+      color: var(--text-lightest);
+    }
 
     &::after {
       @extend .projects__heading::after;
@@ -37,33 +45,6 @@
         color: var(--secondary-light);
         text-decoration: underline;
       }
-    }
-  }
-
-  &__btn {
-    display: inline-block;
-    padding: 1rem 0.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    width: 15rem;
-    margin: 0 auto var(--margin-xl);
-    transition: all 0.3s linear;
-    background-color: var(--secondary);
-    color: var(--white);
-    border: solid 2px var(--secondary);
-    font-family: var(--font-body);
-    font-size: var(--hs-sm);
-
-    i {
-      margin-right: 1.5rem;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: var(--secondary-light);
-      border: solid 2px var(--secondary-light);
-      transform: scale(1.1);
     }
   }
 }

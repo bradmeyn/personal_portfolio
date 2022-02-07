@@ -3,7 +3,7 @@
 
   --white: #ffffff;
 
-  --background-dark: #0a2540;
+  --background-dark: #141e30;
   --background-light: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
   // colors for light backgrounds
@@ -23,6 +23,19 @@
   --secondary: #ff5d4b;
   --secondary-light: #f97c6f;
 
+  --gradient-primary: linear-gradient(
+    to bottom right,
+    #0f2d54 0%,
+    #53789561 100%
+  );
+
+  --gradient-secondary: linear-gradient(
+    to right,
+    #eb3349 0%,
+    var(--secondary) 51%,
+    #eb3349 100%
+  );
+
   --padding-desktop: 5rem 10rem;
   --padding-mobile: 5rem 2rem;
 
@@ -39,8 +52,8 @@
   //font sizes
   --fs--xxs: 1rem;
   --fs-xs: 1.2rem;
-  --fs-sm: 1.5rem;
-  --fs-md: 1.8rem;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
   --fs-lg: 2.3rem;
   --fs-xl: 3rem;
 

@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: var(--margin-xl);
 
   width: 100%;
   max-width: 50rem;
@@ -12,19 +13,18 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 2rem;
-  background-color: #4c4177;
-  background-image: linear-gradient(to bottom right, #4c4177 0%, #2a5470 74%);
+  background-image: var(--gradient-primary);
 
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-
-  background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
   &__text-container {
     width: 100%;
     max-width: 40rem;
     border-radius: 10px;
     order: 1;
     padding-bottom: 2rem;
+
+    &:nth-of-type(even) {
+      order: 2;
+    }
 
     .project__heading {
       font-size: var(--hs-md);
@@ -36,7 +36,7 @@
       font-size: var(--fs-sm);
       line-height: 1.5;
       margin-bottom: var(--margin-lg);
-      color: var(--text-lightest);
+      color: var(--text-light);
     }
   }
 
@@ -49,12 +49,11 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    // overflow: hidden;
+
     margin: 2rem auto 0;
     border-radius: 10px;
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
     border: solid 8px var(--primary);
-    // background: var(--text-darker);
 
     .project__img--desktop {
       position: relative;
@@ -95,38 +94,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    .project__link {
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap;
-      font-size: var(--fs-md);
-      text-decoration: none;
-      cursor: pointer;
-
-      padding: 0.3rem 1.2rem;
-      transition: all 0.3s ease;
-      color: var(--secondary);
-
-      i {
-        transition: all 0.3s ease;
-        font-size: 1rem;
-        margin-left: 0.6rem;
-      }
-
-      &--live {
-        color: #ffffff;
-        border-radius: 15px;
-        background: var(--secondary);
-        border: solid 1px var(--secondary);
-
-        // box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-      }
-
-      &--repo {
-        margin-left: 2rem;
-      }
-    }
   }
 
   &__container {
@@ -152,29 +119,11 @@
       padding: 2rem 2rem 0 0;
       margin-bottom: auto;
     }
-  }
-}
 
-@media (hover: hover) and (pointer: fine) {
-  .project__link {
-    &:hover {
-      i {
-        transform: translateX(4px);
-      }
-    }
-
-    &--live {
-      &:hover {
-        background-color: var(--secondary-light);
-        border: solid 1px var(--secondary-light);
-      }
-    }
-
-    &--repo {
-      &:hover {
-        span {
-          text-decoration: underline;
-        }
+    &:nth-of-type(even) {
+      .project__text-container {
+        order: 2;
+        padding: 2rem 0 0 4rem;
       }
     }
   }

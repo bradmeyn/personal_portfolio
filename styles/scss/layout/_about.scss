@@ -1,5 +1,5 @@
 .about {
-  background: #141e30;
+  background: var(--background-dark);
 
   padding: var(--mobile-padding);
 
@@ -28,18 +28,20 @@
       position: absolute;
       content: "About Me";
       color: var(--text-lightest);
-      left: 3px;
+      left: 5px;
     }
 
     &::after {
       position: absolute;
       content: "";
       width: 5rem;
-      border: 2px solid var(--secondary);
+
       top: 6.5rem;
-      height: 0;
+      height: 4px;
       border-radius: 0 1000px 1000px 0;
       left: 0;
+
+      background-image: var(--gradient-secondary);
     }
   }
 
@@ -56,6 +58,10 @@
     backdrop-filter: blur(10px);
     border-radius: 10px;
     margin: 2rem auto;
+    width: 100%;
+    min-width: 30rem;
+    max-width: 35rem;
+    background-image: var(--gradient-primary);
 
     &__img {
       position: absolute;
@@ -80,7 +86,7 @@
     }
 
     &__subheading {
-      font-size: var(--fs-lg);
+      font-size: var(--fs-md);
       margin-bottom: var(--margin-md);
       color: var(--text-lightest);
     }
@@ -90,19 +96,29 @@
     }
 
     &__detail {
-      margin-left: 1rem;
+      position: relative;
+      margin-left: 3rem;
       color: var(--text-light);
       font-size: var(--fs-md);
       line-height: 1.5;
 
-      i {
-        margin-right: 0.5rem;
-        display: inline-block;
-        font-size: var(--fs-sm);
-        text-decoration: none;
-        color: var(--secondary);
-        // width: 2.3rem;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: -1.75rem;
+        content: " ";
+        height: 2px;
+        width: 8px;
+        background-color: var(--secondary);
       }
+
+      // i {
+      //   margin-right: 0.5rem;
+      //   display: inline-block;
+      //   font-size: var(--fs-sm);
+      //   text-decoration: none;
+      //   color: var(--secondary);
+      // }
     }
 
     &__skills {
@@ -123,6 +139,15 @@
         font-size: var(--fs-md);
         line-height: 1.5;
         position: relative;
+
+        i {
+          margin-right: 1rem;
+          display: inline-block;
+          font-size: var(--fs-md);
+          text-decoration: none;
+          color: var(--secondary);
+          // width: 2.3rem;
+        }
 
         // &::after {
         //   position: absolute;
