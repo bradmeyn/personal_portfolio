@@ -1,4 +1,4 @@
-### Welcome to my Portfolio
+### Welcome to my portfolio
 
 This is my own personal site with access to some of my projects, Github & CodePen. 
 
@@ -10,4 +10,4 @@ This is my own personal site with access to some of my projects, Github & CodePe
 - Animate on Scroll
 - Font Awesome.
 
-That's it. 
+Thanks for visiting.
