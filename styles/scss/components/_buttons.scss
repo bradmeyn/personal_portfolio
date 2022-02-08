@@ -21,12 +21,7 @@
   color: #ffffff;
   background-size: 200% auto;
 
-  background-image: linear-gradient(
-    to right,
-    #eb3349 0%,
-    var(--secondary) 51%,
-    #eb3349 100%
-  );
+  background-image: var(--gradient-secondary);
 
   i {
     position: relative;
@@ -71,6 +66,7 @@
   cursor: pointer;
   padding: 0.3rem 1.2rem;
   transition: all 0.3s ease-in-out;
+  background-size: 200% auto;
   background-image: var(--gradient-secondary);
 
   i {
