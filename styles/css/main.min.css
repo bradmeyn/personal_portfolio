@@ -137,6 +137,7 @@ html {
   background-color: transparent;
   cursor: pointer;
   border: none;
+  padding-bottom: 0.5rem;
 }
 
 .hamburger__box {
@@ -146,7 +147,6 @@ html {
   margin: 0 auto;
   height: 2.5rem;
   width: 2.8rem;
-  padding: 1.5rem;
   animation: fadeDown 1s;
   opacity: 0;
   animation-fill-mode: both;
@@ -301,7 +301,7 @@ html {
     justify-content: flex-end;
     height: 8rem;
     width: 100%;
-    padding: 0 4rem;
+    padding: 0;
   }
   .nav__item {
     display: flex;

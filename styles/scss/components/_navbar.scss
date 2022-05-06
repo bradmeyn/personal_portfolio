@@ -69,6 +69,7 @@
   .nav {
     opacity: 1;
     display: flex;
+
     animation: none !important;
     transition: none !important;
     align-items: center;
@@ -80,7 +81,6 @@
     transform: translateX(0rem);
     transition: none;
     width: 100%;
-
     visibility: visible;
     transition: none;
 
@@ -90,7 +90,7 @@
       justify-content: flex-end;
       height: 8rem;
       width: 100%;
-      padding: 0 4rem;
+      padding: 0;
     }
 
     &__item {
@@ -125,7 +125,6 @@
         height: 100%;
         padding: 1rem 2rem;
         transition: all 0.1s ease-in-out;
-        // width: 8rem;
 
         &:nth-child(5) {
           animation-delay: 2.2s;
