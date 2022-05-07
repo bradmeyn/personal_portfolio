@@ -19,17 +19,17 @@
 
   &__heading {
     &--intro {
-      animation: fadeDown 0.6s;
+      animation: fadeDown 0s;
       opacity: 0;
       animation-fill-mode: both;
-      font-size: var(--hs-sm);
+      font-size: var(--hs-xs);
       font-weight: 300;
       color: var(--text-lighter);
       margin-bottom: var(--margin-lg);
     }
 
     &--name {
-      animation: fadeIn 0.8s;
+      animation: fadeDown 0.6s;
       opacity: 0;
       animation-fill-mode: both;
       animation-delay: 0.5s;
@@ -40,7 +40,7 @@
 
       &::before {
         position: absolute;
-        content: "Brad Meyn.";
+        content: 'Brad Meyn.';
         color: var(--white);
         left: 5px;
         top: 2px;
@@ -49,10 +49,10 @@
   }
 
   &__subheading {
-    font-size: var(--hs-md);
+    font-size: var(--fs-xl);
     font-weight: 500;
-    color: var(--text-lighter);
-    margin-bottom: var(--margin-xl);
+    color: var(--white);
+    margin-bottom: var(--margin-lg);
     animation: fadeInRight 1s;
     opacity: 0;
     animation-fill-mode: both;
@@ -61,6 +61,18 @@
 
   a {
     text-decoration: none;
+  }
+
+  &__intro {
+    font-size: var(--hs-sm);
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: var(--margin-xl);
+    max-width: 50rem;
+    animation: fadeInRight 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-delay: 1s;
   }
 }
 

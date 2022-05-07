@@ -27,7 +27,7 @@
   );
   --padding-desktop: 5rem 10rem;
   --padding-mobile: 5rem 2rem;
-  --font-body: "DM Sans", sans-serif;
+  --font-body: 'DM Sans', sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   --margin-xs: 0.25rem;
   --margin-sm: 0.5rem;
@@ -43,8 +43,8 @@
   --hs-xs: 1.5rem;
   --hs-sm: 2rem;
   --hs-md: 3rem;
-  --hs-lg: 4.5rem;
-  --hs-xl: 6.5rem;
+  --hs-lg: 4.7rem;
+  --hs-xl: 6.1rem;
 }
 
 @keyframes fadeIn {
@@ -479,8 +479,8 @@ html {
   border: solid 4px var(--primary);
   height: 80%;
   width: 23%;
-  right: -2rem;
-  bottom: -2rem;
+  right: -1.5rem;
+  bottom: -1.5rem;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
@@ -1005,17 +1005,17 @@ html {
 }
 
 .landing__heading--intro {
-  animation: fadeDown 0.6s;
+  animation: fadeDown 0s;
   opacity: 0;
   animation-fill-mode: both;
-  font-size: var(--hs-sm);
+  font-size: var(--hs-xs);
   font-weight: 300;
   color: var(--text-lighter);
   margin-bottom: var(--margin-lg);
 }
 
 .landing__heading--name {
-  animation: fadeIn 0.8s;
+  animation: fadeDown 0.6s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 0.5s;
@@ -1027,17 +1027,17 @@ html {
 
 .landing__heading--name::before {
   position: absolute;
-  content: "Brad Meyn.";
+  content: 'Brad Meyn.';
   color: var(--white);
   left: 5px;
   top: 2px;
 }
 
 .landing__subheading {
-  font-size: var(--hs-md);
+  font-size: var(--fs-xl);
   font-weight: 500;
-  color: var(--text-lighter);
-  margin-bottom: var(--margin-xl);
+  color: var(--white);
+  margin-bottom: var(--margin-lg);
   animation: fadeInRight 1s;
   opacity: 0;
   animation-fill-mode: both;
@@ -1046,6 +1046,18 @@ html {
 
 .landing a {
   text-decoration: none;
+}
+
+.landing__intro {
+  font-size: var(--hs-sm);
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: var(--margin-xl);
+  max-width: 50rem;
+  animation: fadeInRight 1s;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-delay: 1s;
 }
 
 .projects {
