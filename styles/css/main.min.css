@@ -768,14 +768,14 @@ html {
 
 .about__heading::before {
   position: absolute;
-  content: "About Me";
+  content: 'About Me';
   color: var(--text-lightest);
   left: 5px;
 }
 
 .about__heading::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 5rem;
   top: 6.5rem;
   height: 4px;
@@ -788,6 +788,15 @@ html {
   font-size: var(--fs-md);
   line-height: 1.5;
   margin-bottom: var(--margin-lg);
+}
+
+.about__link {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.about__link:hover {
+  text-decoration: underline;
 }
 
 .about .profile {
@@ -849,7 +858,7 @@ html {
   position: absolute;
   top: 50%;
   left: -1.75rem;
-  content: " ";
+  content: ' ';
   height: 2px;
   width: 8px;
   background-color: var(--secondary);

@@ -26,14 +26,14 @@
 
     &::before {
       position: absolute;
-      content: "About Me";
+      content: 'About Me';
       color: var(--text-lightest);
       left: 5px;
     }
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       width: 5rem;
 
       top: 6.5rem;
@@ -48,6 +48,15 @@
     font-size: var(--fs-md);
     line-height: 1.5;
     margin-bottom: var(--margin-lg);
+  }
+
+  &__link {
+    color: var(--secondary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .profile {
@@ -107,7 +116,7 @@
         position: absolute;
         top: 50%;
         left: -1.75rem;
-        content: " ";
+        content: ' ';
         height: 2px;
         width: 8px;
         background-color: var(--secondary);
