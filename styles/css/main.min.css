@@ -270,7 +270,7 @@ html {
   right: 0;
   margin: auto;
   width: 0%;
-  content: "";
+  content: '';
   background: var(--secondary);
   color: var(--white);
   height: 5px;
@@ -287,6 +287,7 @@ html {
     align-items: center;
     z-index: 2;
     height: 100%;
+    padding-right: 5rem;
     background-color: transparent;
     background-image: none;
     transform: translateX(0rem);
@@ -358,7 +359,7 @@ html {
     right: 0;
     margin: auto;
     width: 0%;
-    content: "";
+    content: '';
     background: var(--secondary);
     color: transparent;
     transition: all 0.2s ease-in-out;
@@ -477,8 +478,7 @@ html {
   border-radius: 10px;
   position: absolute;
   border: solid 4px var(--primary);
-  height: 80%;
-  width: 23%;
+  width: 20%;
   right: -1.5rem;
   bottom: -1.5rem;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
@@ -551,7 +551,7 @@ html {
 }
 
 .icon-nav__link {
-  font-size: var(--fs-lg);
+  font-size: var(--hs-md);
   cursor: pointer;
   text-decoration: none;
   color: var(--text-light);
@@ -562,7 +562,7 @@ html {
   opacity: 0;
   margin-top: 0.5rem;
   text-align: center;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-);
   font-weight: 500;
   transform: translateY(-25px);
   color: var(--text-lightest);
@@ -575,11 +575,11 @@ html {
 }
 
 .contact-icon.icon-nav__link {
-  font-size: var(--fs-lg);
+  font-size: var(--hs-md);
 }
 
 .contact-icon.icon-nav__title {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
 }
 
 @media only screen and (min-width: 768px) {
@@ -979,7 +979,7 @@ html {
 
 .header__logo::before {
   position: absolute;
-  content: "BM.";
+  content: 'BM.';
   color: var(--text-lightest);
   left: 2px;
   top: 1px;
@@ -1067,6 +1067,12 @@ html {
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+  .landing__heading--name {
+    font-size: 8rem;
+  }
 }
 
 .projects {

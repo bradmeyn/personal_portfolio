@@ -45,6 +45,7 @@
     width: 100%;
 
     max-width: 42rem;
+
     display: flex;
     position: relative;
     justify-content: center;
@@ -66,9 +67,7 @@
       border-radius: 10px;
       position: absolute;
       border: solid 4px var(--primary);
-      height: 80%;
-      width: 23%;
-      // width: 8rem;
+      width: 20%;
       right: -1.5rem;
       bottom: -1.5rem;
       box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);

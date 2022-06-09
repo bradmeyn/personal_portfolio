@@ -48,7 +48,7 @@
       right: 0;
       margin: auto;
       width: 0%;
-      content: "";
+      content: '';
       background: var(--secondary);
       color: var(--white);
       height: 5px;
@@ -58,24 +58,17 @@
   }
 }
 
-//tablet and bigger
+//tablet and up
 @media only screen and (min-width: $screen-md) {
-  // .content {
-  //   height: 100%;
-  //   width: 100%;
-  //   z-index: 4;
-  // }
-
   .nav {
     opacity: 1;
     display: flex;
-
     animation: none !important;
     transition: none !important;
     align-items: center;
     z-index: 2;
     height: 100%;
-
+    padding-right: 5rem;
     background-color: transparent;
     background-image: none;
     transform: translateX(0rem);
@@ -154,7 +147,7 @@
         right: 0;
         margin: auto;
         width: 0%;
-        content: "";
+        content: '';
         background: var(--secondary);
         color: transparent;
         transition: all 0.2s ease-in-out;

@@ -77,4 +77,11 @@
 }
 
 @media only screen and (min-width: $screen-md) {
+  .landing {
+    &__heading {
+      &--name {
+        font-size: 8rem;
+      }
+    }
+  }
 }
