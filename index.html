@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brad's Dev Portfolio</title>
+    <meta name="description" content="Brad Meyn's developer portfolio" />
+    <title>Brad Meyn</title>
     <link rel="icon" type="image/png" href="/favicon.ico" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,7 +16,7 @@
       src="https://kit.fontawesome.com/06496a0555.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles/css/main.min.css" />
+    <link rel="stylesheet" href="/static/styles/css/main.min.css" />
     <meta property="og:title" content="Brad's Dev Portfolio" />
     <meta
       property="og:image"
@@ -150,13 +151,11 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                Hi, my name is Brad & I'm a software developer located in
-                Newcastle, Australia. A few years ago I started taking some
-                learning web development as a hobby. My main goal was to learn
-                more about how websites are made and potentially build something
-                cool. I enjoyed the process so much I decided to change careers
-                and become a software developer.
+                Hi, my name is Brad & I'm a fullstack software developer located
+                in Newcastle, Australia. For work I utilise a range of different
+                technologies including React & Django on a day-to-day basis.
               </p>
+
               <p
                 class="about__paragraph"
                 data-aos="fade-up"
@@ -168,10 +167,9 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                I'm current employed as a software developer and also
-                completeting my Masters of Computer Science. When time allows I
-                also try to learn new technology, creating projects to show on
-                this site.
+                I am currently finishing my Masters of Computer Science, however
+                when time allows I also like building side projects to learn new
+                concepts & technology.
               </p>
 
               <p
@@ -197,36 +195,46 @@
               <h4 class="profile__subheading">Qualifications</h4>
               <div class="profile__qualifications">
                 <div class="profile__detail">
+                  <span class="qualification"
+                    >Masters of Computer Science (in progress)</span
+                  >
+                </div>
+                <div class="profile__detail">
                   <span class="qualification">Bachelor of Business</span>
                 </div>
                 <div class="profile__detail">
                   <span class="qualification">Bachelor of Commerce</span>
                 </div>
-                <div class="profile__detail">
-                  <span class="qualification"
-                    >Masters of Computer Science (in progress)</span
-                  >
-                </div>
               </div>
               <h4 class="profile__subheading">Experience with:</h4>
               <div class="profile__skills">
                 <ul class="skill-list">
-                  <li class="skill-item"><i class="fal fa-check"></i>HTML</li>
+                  <li class="skill-item"><i class="fal fa-check"></i>React</li>
                   <li class="skill-item">
                     <i class="fal fa-check"></i>CSS/SASS
                   </li>
                   <li class="skill-item">
-                    <i class="fal fa-check"></i>Javascript
+                    <i class="fal fa-check"></i>Typescript
                   </li>
-                  <li class="skill-item"><i class="fal fa-check"></i>React</li>
+                  <li class="skill-item">
+                    <i class="fal fa-check"></i>Tailwind
+                  </li>
                 </ul>
                 <ul class="skill-list">
                   <li class="skill-item">
-                    <i class="fal fa-check"></i>Node/Express
+                    <i class="fal fa-check"></i>Node.js
+                  </li>
+                  <li class="skill-item">
+                    <i class="fal fa-check"></i>Express
                   </li>
                   <li class="skill-item">
                     <i class="fal fa-check"></i>MongoDB
                   </li>
+                  <li class="skill-item"><i class="fal fa-check"></i>Prisma</li>
+                </ul>
+                <ul class="skill-list">
+                  <li class="skill-item"><i class="fal fa-check"></i>Python</li>
+                  <li class="skill-item"><i class="fal fa-check"></i>Django</li>
                   <li class="skill-item"><i class="fal fa-check"></i>Java</li>
                   <li class="skill-item"><i class="fal fa-check"></i>MySQL</li>
                 </ul>
@@ -285,23 +293,21 @@
                   </p>
 
                   <div class="project__badge-container">
-                    <span class="badge">CSS</span>
-                    <span class="badge">JAVSCRIPT</span>
+                    <span class="badge">TYPESCRIPT</span>
                     <span class="badge">BOOTSTRAP</span>
                     <span class="badge">NODE</span>
                     <span class="badge">EXPRESS</span>
                     <span class="badge">EJS</span>
                     <span class="badge">MONGODB</span>
                     <span class="badge">PASSPORT</span>
-                    <span class="badge">REST API</span>
+
                     <span class="badge">CHART.JS</span>
-                    <span class="badge">HEROKU</span>
                   </div>
                   <div class="project__links">
                     <a
                       class="project__link project__link--live"
                       target="_blank"
-                      href="https://client-book.herokuapp.com/"
+                      href="https://clientbook.onrender.com/"
                       ><span>Live Site</span>
                       <i class="fas fa-chevron-right"></i
                     ></a>
@@ -588,7 +594,6 @@
           </div>
         </section>
       </div>
-      <!-- <canvas class="particle"></canvas> -->
     </main>
 
     <footer class="footer">
