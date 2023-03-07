@@ -1028,7 +1028,7 @@ html {
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 0.5s;
-  font-size: var(--hs-xl);
+  font-size: 7rem;
   display: block;
   margin-bottom: var(--margin-sm);
   color: var(--secondary);
@@ -1043,7 +1043,7 @@ html {
 }
 
 .landing__subheading {
-  font-size: var(--fs-xl);
+  font-size: 4rem;
   font-weight: 500;
   color: var(--white);
   margin-bottom: var(--margin-lg);
@@ -1071,7 +1071,10 @@ html {
 
 @media only screen and (min-width: 768px) {
   .landing__heading--name {
-    font-size: 8rem;
+    font-size: 10rem;
+  }
+  .landing__subheading {
+    font-size: 5rem;
   }
 }
 

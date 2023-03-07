@@ -7,7 +7,6 @@
   width: 100%;
   overflow: hidden;
   background-size: cover;
-
   padding: var(--mobile-padding);
   height: 100vh;
 
@@ -33,7 +32,7 @@
       opacity: 0;
       animation-fill-mode: both;
       animation-delay: 0.5s;
-      font-size: var(--hs-xl);
+      font-size: 7rem;
       display: block;
       margin-bottom: var(--margin-sm);
       color: var(--secondary);
@@ -49,7 +48,7 @@
   }
 
   &__subheading {
-    font-size: var(--fs-xl);
+    font-size: 4rem;
     font-weight: 500;
     color: var(--white);
     margin-bottom: var(--margin-lg);
@@ -80,8 +79,12 @@
   .landing {
     &__heading {
       &--name {
-        font-size: 8rem;
+        font-size: 10rem;
       }
+    }
+
+    &__subheading {
+      font-size: 5rem;
     }
   }
 }
