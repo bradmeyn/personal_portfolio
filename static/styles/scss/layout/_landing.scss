@@ -32,7 +32,7 @@
       opacity: 0;
       animation-fill-mode: both;
       animation-delay: 0.5s;
-      font-size: 7rem;
+      font-size: 6rem;
       display: block;
       margin-bottom: var(--margin-sm);
       color: var(--secondary);
@@ -41,17 +41,17 @@
         position: absolute;
         content: 'Brad Meyn.';
         color: var(--white);
-        left: 5px;
-        top: 2px;
+        left: 0.5rem;
+        top: 0.25rem;
       }
     }
   }
 
   &__subheading {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     color: var(--white);
-    margin-bottom: var(--margin-lg);
+    margin-bottom: var(--margin-xl);
     animation: fadeInRight 1s;
     opacity: 0;
     animation-fill-mode: both;
