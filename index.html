@@ -151,11 +151,11 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                I am a fullstack software developer located in Newcastle,
-                Australia. My background is finance, however a curiosity for how
-                the web worked led me to learn how to code. I enjoyed the
-                process so much I decided to pursue a career change and become a
-                software developer.
+                I am a software developer located in Newcastle, Australia. My
+                background is finance, however a curiosity for how the web
+                worked led me to learn how to code. I enjoyed the process so
+                much I decided to change careers and get a Masters degree in
+                Computer Science.
               </p>
 
               <p
@@ -163,10 +163,9 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                I enjoy making functional, great looking applications and pride
-                myself on attention to detail. I have experiencing utilising a
-                range of technologies and try to keep up-to-date using
-                side-projects as a way to learn new skills.
+                My preference is front-end development w/ React & Typescript,
+                however thanks to work, study and personal projects I have
+                experience with a wide range of technologies.
               </p>
 
               <p
@@ -230,7 +229,9 @@
                 <ul class="skill-list">
                   <li class="skill-item"><i class="fal fa-check"></i>Python</li>
                   <li class="skill-item"><i class="fal fa-check"></i>Django</li>
-                  <li class="skill-item"><i class="fal fa-check"></i>Java</li>
+                  <li class="skill-item">
+                    <i class="fal fa-check"></i>ASP.NET
+                  </li>
                   <li class="skill-item"><i class="fal fa-check"></i>SQL</li>
                 </ul>
               </div>
@@ -258,10 +259,61 @@
               implementing various technology & concepts.
             </p>
             <div class="project__container">
-              <!-- clientbook -->
               <article
                 class="project"
                 data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <a
+                  target="_blank"
+                  href="https://bradmeyn.github.io/react-todo-list/"
+                  class="project__img-container"
+                >
+                  <img
+                    class="project__img--desktop"
+                    src="images/todo-desktop.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="project__text-container">
+                  <h3 class="project__heading">Workshop</h3>
+                  <p class="project__description">
+                    A trello-esq kanban app for managing side-project tasks.
+                    Goal was to demonstrate a grasp of React and build a
+                    Typescript API I can use for trying other frameworks.
+                  </p>
+                  <div class="project__badge-container">
+                    <span class="badge">React</span>
+                    <span class="badge">Typescript</span>
+                    <span class="badge">Tailwind</span>
+                    <span class="badge">Node</span>
+                    <span class="badge">Express</span>
+                    <span class="badge">Prisma</span>
+                    <span class="badge">PostgreSQL</span>
+                  </div>
+                  <div class="project__links">
+                    <a
+                      class="project__link project__link--live"
+                      target="_blank"
+                      href="https://workshopbrad.netlify.app/"
+                      ><span>Live Site</span>
+                      <i class="fas fa-chevron-right"></i
+                    ></a>
+                    <a
+                      class="project__link project__link--repo"
+                      target="_blank"
+                      href="https://github.com/bradmeyn/workshop"
+                      ><span>Repository</span>
+                      <i class="fas fa-chevron-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- clientbook -->
+              <article
+                class="project"
+                data-aos="fade-right"
                 data-aos-duration="1000"
               >
                 <a
@@ -283,18 +335,17 @@
                 <div class="project__text-container">
                   <h3 class="project__heading">Clientbook</h3>
                   <p class="project__description">
-                    CRM application for managing client information, notes &
-                    jobs. Includes authentication & cloud database.
+                    The first fullstack application I built, showing it's age a
+                    a bit now. A CRM for managing clients and related jobs.
+                    Serve will take a bit to spin up as it's hosted for free.
                   </p>
 
                   <div class="project__badge-container">
-                    <span class="badge">TYPESCRIPT</span>
-                    <span class="badge">BOOTSTRAP</span>
-                    <span class="badge">NODE</span>
-                    <span class="badge">EXPRESS</span>
-                    <span class="badge">EJS</span>
-                    <span class="badge">MONGODB</span>
-                    <span class="badge">CHART.JS</span>
+                    <span class="badge">Typescript</span>
+                    <span class="badge">Bootstrap</span>
+                    <span class="badge">Node</span>
+                    <span class="badge">Express</span>
+                    <span class="badge">MongoDB</span>
                   </div>
                   <div class="project__links">
                     <a
@@ -314,9 +365,11 @@
                   </div>
                 </div>
               </article>
+
+              <!-- Watchflix -->
               <article
                 class="project"
-                data-aos="fade-right"
+                data-aos="fade-left"
                 data-aos-duration="1000"
               >
                 <a
@@ -338,13 +391,14 @@
                 <div class="project__text-container">
                   <h3 class="project__heading">Watchflix</h3>
                   <p class="project__description">
-                    Frontend focused movie discovery app.
+                    Movie search app using the TMDB API featuring some cool
+                    carousels. Built to try out Next.js. Backend coming
+                    eventually.
                   </p>
                   <div class="project__badge-container">
-                    <span class="badge">NEXT.JS</span>
-                    <span class="badge">TAILWIND</span>
-                    <span class="badge">TYPESCRIPT</span>
-                    <span class="badge">TMDB API</span>
+                    <span class="badge">Next.JS</span>
+                    <span class="badge">Tailwind</span>
+                    <span class="badge">Typescript</span>
                   </div>
                   <div class="project__links">
                     <a
@@ -368,7 +422,7 @@
               <!-- Investment Growth Calculator -->
               <article
                 class="project"
-                data-aos="fade-left"
+                data-aos="fade-right"
                 data-aos-duration="1000"
               >
                 <a
@@ -391,7 +445,7 @@
                   <h3 class="project__heading">Investment Growth Calculator</h3>
                   <p class="project__description">
                     Interactive tool to project future value of an investment.
-                    Using Chart.JS for visualisations
+                    The very first project I built and hosted on the web.
                   </p>
                   <div class="project__badge-container">
                     <span class="badge">HTML</span>
@@ -412,58 +466,6 @@
                       class="project__link project__link--repo"
                       target="_blank"
                       href="https://github.com/bradmeyn/compound_interest_calculator"
-                      ><span>Repository</span>
-                      <i class="fas fa-chevron-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- React Todo -->
-              <article
-                class="project"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-              >
-                <a
-                  target="_blank"
-                  href="https://bradmeyn.github.io/react-todo-list/"
-                  class="project__img-container"
-                >
-                  <img
-                    class="project__img--desktop"
-                    src="images/todo-desktop.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="project__img--mobile"
-                    src="images/todo-mobile.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="project__text-container">
-                  <h3 class="project__heading">Todo List</h3>
-                  <p class="project__description">
-                    A todo list built with React class-components and updated to
-                    utilise hooks. Localstorage is used as a mock database
-                  </p>
-                  <div class="project__badge-container">
-                    <span class="badge">REACT</span>
-                    <span class="badge">CSS</span>
-                    <span class="badge">LOCALSTORAGE</span>
-                  </div>
-                  <div class="project__links">
-                    <a
-                      class="project__link project__link--live"
-                      target="_blank"
-                      href="https://bradmeyn.github.io/react-todo-list/"
-                      ><span>Live Site</span>
-                      <i class="fas fa-chevron-right"></i
-                    ></a>
-                    <a
-                      class="project__link project__link--repo"
-                      target="_blank"
-                      href="https://github.com/bradmeyn/react-todo-list"
                       ><span>Repository</span>
                       <i class="fas fa-chevron-right"></i
                     ></a>
@@ -497,12 +499,14 @@
                   <h3 class="project__heading">Personal Site</h3>
                   <p class="project__description">
                     This is my personal portfolio you are currently visiting.
+                    Just a simple static site built with HTML, CSS and
+                    Javascript.
                   </p>
                   <div class="project__badge-container">
                     <span class="badge">HTML</span>
                     <span class="badge">CSS</span>
-                    <span class="badge">SASS</span>
-                    <span class="badge">JAVSCRIPT</span>
+                    <span class="badge">Sass</span>
+                    <span class="badge">Javascript</span>
                   </div>
                   <div class="project__links">
                     <a
