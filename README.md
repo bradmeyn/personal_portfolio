@@ -2,7 +2,7 @@
 
 ### Description
 
-My personal developer portfolio for showcasing various applications I have built.
+My original vanilla html/css/js personal site.
 
 ## Software Used
 
